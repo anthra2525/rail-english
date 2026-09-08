@@ -1,0 +1,2017 @@
+{
+  "schemaVersion": 1,
+  "packId": "rail-original-1",
+  "title": "Rail English オリジナル120問",
+  "questions": [
+    {
+      "id": "q001",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "品詞",
+      "text": "Please review the attached agenda _____ before tomorrow’s meeting.",
+      "options": [
+        "carefully",
+        "carefulness",
+        "careful",
+        "care"
+      ],
+      "answer": 0,
+      "translation": "明日の会議の前に、添付の議題を注意深く確認してください。",
+      "explanation": "動詞 review（確認する）を修飾するので副詞 carefully。careful は形容詞、care と carefulness は名詞です。"
+    },
+    {
+      "id": "q002",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "日程・会議",
+      "text": "The training session has been _____ until next Friday because the instructor is unavailable.",
+      "options": [
+        "reserved",
+        "postponed",
+        "attended",
+        "approved"
+      ],
+      "answer": 1,
+      "translation": "講師の都合がつかないため、研修は来週の金曜日まで延期されました。",
+      "explanation": "postpone は「延期する」。has been postponed で受け身の現在完了形です。approve は承認する、attend は出席する、reserve は予約する。"
+    },
+    {
+      "id": "q003",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "前置詞",
+      "text": "All expense reports must be submitted _____ 5 p.m. on Friday at the latest.",
+      "options": [
+        "since",
+        "during",
+        "by",
+        "for"
+      ],
+      "answer": 2,
+      "translation": "すべての経費報告書は、遅くとも金曜日の午後5時までに提出しなければなりません。",
+      "explanation": "完了の期限「〜までに」には by。during は期間の中、since は起点、for は期間の長さを表します。"
+    },
+    {
+      "id": "q004",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "時制",
+      "text": "Ms. Chen _____ in the sales department since 2021 and still works there.",
+      "options": [
+        "will work",
+        "had worked",
+        "is working",
+        "has worked"
+      ],
+      "answer": 3,
+      "translation": "チェンさんは2021年から営業部で働いており、今もそこで働いています。",
+      "explanation": "since 2021 と今も続いているという情報から現在完了形 has worked。過去から現在までの継続を示します。"
+    },
+    {
+      "id": "q005",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "接続詞",
+      "text": "_____ the weather was poor, the outdoor product demonstration went ahead as planned.",
+      "options": [
+        "Despite",
+        "Although",
+        "Because of",
+        "During"
+      ],
+      "answer": 1,
+      "translation": "天候は悪かったものの、屋外での製品実演は予定どおり行われました。",
+      "explanation": "後ろに the weather was poor という主語＋動詞が続くので、逆接の接続詞 Although。Despite は名詞などを取ります。"
+    },
+    {
+      "id": "q006",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "品詞",
+      "text": "The new reservation system is more _____ than the previous one.",
+      "options": [
+        "reliability",
+        "reliably",
+        "rely",
+        "reliable"
+      ],
+      "answer": 3,
+      "translation": "新しい予約システムは以前のものより信頼できます。",
+      "explanation": "is の補語としてシステムの性質を述べる形容詞 reliable を選びます。more reliable than で比較の表現です。"
+    },
+    {
+      "id": "q007",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "Please keep your _____ as proof of payment.",
+      "options": [
+        "receipt",
+        "recipe",
+        "recipient",
+        "reception"
+      ],
+      "answer": 0,
+      "translation": "支払いの証明として領収書を保管してください。",
+      "explanation": "receipt は領収書。recipe は調理法、reception は受付、recipient は受取人です。形の似た語を区別します。"
+    },
+    {
+      "id": "q008",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "主語と動詞",
+      "text": "Each of the conference rooms _____ equipped with a projector.",
+      "options": [
+        "were",
+        "are",
+        "is",
+        "have"
+      ],
+      "answer": 2,
+      "translation": "会議室はそれぞれプロジェクターを備えています。",
+      "explanation": "主語の中心は単数の Each。「each of ＋複数名詞」でも動詞は単数に合わせ、is equipped with とします。"
+    },
+    {
+      "id": "q009",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "動詞の形",
+      "text": "Employees are encouraged _____ the online safety course.",
+      "options": [
+        "completion",
+        "complete",
+        "completed",
+        "to complete"
+      ],
+      "answer": 3,
+      "translation": "従業員はオンラインの安全講習を修了するよう奨励されています。",
+      "explanation": "encourage 人 to do の受け身は、人 be encouraged to do。「〜するよう勧められる」です。"
+    },
+    {
+      "id": "q010",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "日程・会議",
+      "text": "Could you _____ whether you will attend the meeting by replying to this message?",
+      "options": [
+        "consume",
+        "confirm",
+        "compete",
+        "confuse"
+      ],
+      "answer": 1,
+      "translation": "このメッセージに返信して、会議に出席するかどうかを確認していただけますか。",
+      "explanation": "confirm whether ... は「〜かどうかを確認する」。confuse は混乱させる、consume は消費する、compete は競争する。"
+    },
+    {
+      "id": "q011",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "関係詞",
+      "text": "The employee _____ organized the workshop will introduce the speakers.",
+      "options": [
+        "whose",
+        "who",
+        "whom",
+        "which"
+      ],
+      "answer": 1,
+      "translation": "研修会を企画した従業員が講演者を紹介します。",
+      "explanation": "先行詞は人で、関係詞が organized の主語になるため who。whose は所有格、whom は目的格です。"
+    },
+    {
+      "id": "q012",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "前置詞",
+      "text": "Visitors must check in at the reception desk _____ entering the laboratory.",
+      "options": [
+        "between",
+        "before",
+        "since",
+        "until"
+      ],
+      "answer": 1,
+      "translation": "訪問者は実験室に入る前に受付で手続きをしなければなりません。",
+      "explanation": "before entering で「入る前に」。受付を済ませてから入室するという順序を表します。"
+    },
+    {
+      "id": "q013",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "比較",
+      "text": "This route is _____ than the one we used yesterday.",
+      "options": [
+        "shortest",
+        "shorter",
+        "shorten",
+        "shortly"
+      ],
+      "answer": 1,
+      "translation": "この経路は昨日使ったものより短いです。",
+      "explanation": "than があるので比較級 shorter。shortest は最上級、shortly は副詞、shorten は動詞です。"
+    },
+    {
+      "id": "q014",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "代名詞",
+      "text": "The company updated _____ website to make online ordering easier.",
+      "options": [
+        "it",
+        "its",
+        "itself",
+        "they"
+      ],
+      "answer": 1,
+      "translation": "その会社はオンライン注文をしやすくするため、自社のウェブサイトを更新しました。",
+      "explanation": "名詞 website の前で所有を示す its。「its＝それの」と「it’s＝it is」を区別しましょう。"
+    },
+    {
+      "id": "q015",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The price includes delivery, so there is no _____ charge for shipping.",
+      "options": [
+        "additional",
+        "accurate",
+        "annual",
+        "available"
+      ],
+      "answer": 0,
+      "translation": "価格には配送料が含まれているので、配送の追加料金はありません。",
+      "explanation": "additional charge は追加料金。available は利用できる、annual は年1回の、accurate は正確な。"
+    },
+    {
+      "id": "q016",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "動詞の形",
+      "text": "We look forward to _____ you at the annual conference.",
+      "options": [
+        "saw",
+        "seen",
+        "see",
+        "seeing"
+      ],
+      "answer": 3,
+      "translation": "年次会議でお会いできることを楽しみにしています。",
+      "explanation": "look forward to の to は前置詞なので、後ろは名詞か動名詞。ここでは seeing です。"
+    },
+    {
+      "id": "q017",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "接続詞",
+      "text": "Please contact the help desk _____ you cannot access your account.",
+      "options": [
+        "if",
+        "despite",
+        "unless",
+        "during"
+      ],
+      "answer": 0,
+      "translation": "アカウントにアクセスできない場合は、ヘルプデスクに連絡してください。",
+      "explanation": "条件「もし〜なら」を表す if。unless は「〜でない限り」で、ここでは意図が逆になります。"
+    },
+    {
+      "id": "q018",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "日程・会議",
+      "text": "The manager asked us to _____ a meeting with the new supplier.",
+      "options": [
+        "arrange",
+        "afford",
+        "apply",
+        "achieve"
+      ],
+      "answer": 0,
+      "translation": "マネージャーは新しい仕入先との会議を手配するよう私たちに頼みました。",
+      "explanation": "arrange a meeting は「会議を手配する」。achieve は達成する、afford は余裕がある、apply は応募・適用する。"
+    },
+    {
+      "id": "q019",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "受け身",
+      "text": "The damaged items will _____ at no extra cost.",
+      "options": [
+        "replace",
+        "replacing",
+        "be replaced",
+        "replacement"
+      ],
+      "answer": 2,
+      "translation": "破損した商品は追加費用なしで交換されます。",
+      "explanation": "商品は交換「される」側なので受け身。will の後は be ＋過去分詞で will be replaced。"
+    },
+    {
+      "id": "q020",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "品詞",
+      "text": "Your _____ is required before we can process the order.",
+      "options": [
+        "approvingly",
+        "approve",
+        "approved",
+        "approval"
+      ],
+      "answer": 3,
+      "translation": "注文を処理するには、あなたの承認が必要です。",
+      "explanation": "所有格 Your の後で主語になる名詞 approval を選びます。approve は動詞です。"
+    },
+    {
+      "id": "q021",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The store offers a full _____ if an item is returned unused within 14 days.",
+      "options": [
+        "reminder",
+        "reward",
+        "refund",
+        "revenue"
+      ],
+      "answer": 2,
+      "translation": "商品が未使用のまま14日以内に返品されれば、その店は全額返金します。",
+      "explanation": "full refund は全額返金。reward は報酬、revenue は売上高、reminder は注意を促す通知です。"
+    },
+    {
+      "id": "q022",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "数量",
+      "text": "Only a _____ seats remain for the afternoon workshop.",
+      "options": [
+        "every",
+        "few",
+        "little",
+        "much"
+      ],
+      "answer": 1,
+      "translation": "午後の研修会の残席はわずかです。",
+      "explanation": "seats は数えられる複数名詞なので a few。a little は数えられない名詞の量に使います。"
+    },
+    {
+      "id": "q023",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "時制",
+      "text": "When the courier arrives tomorrow, the receptionist _____ the package.",
+      "options": [
+        "signed for",
+        "has signed for",
+        "will sign for",
+        "had signed for"
+      ],
+      "answer": 2,
+      "translation": "明日配達員が来たら、受付係が荷物の受領サインをします。",
+      "explanation": "未来の出来事ですが、when の節では現在形 arrives。主節では未来を表す will sign for を使えます。"
+    },
+    {
+      "id": "q024",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "日程・会議",
+      "text": "Please let me know which of the proposed dates is most _____ for you.",
+      "options": [
+        "convenient",
+        "convene",
+        "convenience",
+        "conveniently"
+      ],
+      "answer": 0,
+      "translation": "提案した日程のうち、どれが最も都合がよいか教えてください。",
+      "explanation": "is の後に性質を表す形容詞 convenient。「都合のよい」という意味で、日程調整によく合う表現です。"
+    },
+    {
+      "id": "q025",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "前置詞",
+      "text": "Mr. Patel is responsible _____ maintaining the customer database.",
+      "options": [
+        "at",
+        "with",
+        "to",
+        "for"
+      ],
+      "answer": 3,
+      "translation": "パテルさんは顧客データベースの管理を担当しています。",
+      "explanation": "be responsible for ＋名詞・動名詞で「〜を担当している／〜に責任がある」です。"
+    },
+    {
+      "id": "q026",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "接続詞",
+      "text": "The elevator is out of service, _____ please use the stairs.",
+      "options": [
+        "or",
+        "unless",
+        "although",
+        "so"
+      ],
+      "answer": 3,
+      "translation": "エレベーターは運転を停止しているので、階段を利用してください。",
+      "explanation": "前半が理由で後半が結果・依頼なので so。「そのため」というつながりを作ります。"
+    },
+    {
+      "id": "q027",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "A _____ of the updated brochure is attached to this email.",
+      "options": [
+        "venue",
+        "shift",
+        "fare",
+        "copy"
+      ],
+      "answer": 3,
+      "translation": "更新したパンフレットの写しをこのメールに添付しています。",
+      "explanation": "a copy of は「〜の写し／1部」。fare は運賃、venue は会場、shift は勤務時間帯です。"
+    },
+    {
+      "id": "q028",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "品詞",
+      "text": "The technician _____ identified the cause of the problem.",
+      "options": [
+        "quickly",
+        "quickness",
+        "quicker",
+        "quick"
+      ],
+      "answer": 0,
+      "translation": "技術者は問題の原因を素早く特定しました。",
+      "explanation": "動詞 identified を修飾する副詞 quickly を選びます。形容詞 quick と名詞 quickness はこの位置に入りません。"
+    },
+    {
+      "id": "q029",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "動詞の形",
+      "text": "The company plans _____ a second office next year.",
+      "options": [
+        "opening",
+        "opens",
+        "to open",
+        "opened"
+      ],
+      "answer": 2,
+      "translation": "その会社は来年、2つ目の事務所を開設する予定です。",
+      "explanation": "plan to do で「〜する予定だ」。plans の目的を表す to open を選びます。"
+    },
+    {
+      "id": "q030",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "日程・会議",
+      "text": "The meeting will _____ at 9 a.m. sharp, so please arrive a few minutes early.",
+      "options": [
+        "begun",
+        "began",
+        "begin",
+        "beginning"
+      ],
+      "answer": 2,
+      "translation": "会議は午前9時ちょうどに始まるので、数分早めに到着してください。",
+      "explanation": "助動詞 will の後は動詞の原形 begin。at 9 a.m. sharp は「午前9時ちょうどに」です。"
+    },
+    {
+      "id": "q031",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "接続詞",
+      "text": "The client approved the design, _____ that the final version includes a larger logo.",
+      "options": [
+        "provided",
+        "whereas",
+        "despite",
+        "during"
+      ],
+      "answer": 0,
+      "translation": "顧客は最終版により大きなロゴを入れることを条件に、そのデザインを承認しました。",
+      "explanation": "provided that ... は「〜という条件で」。ここでは承認の条件を述べています。whereas は対比です。"
+    },
+    {
+      "id": "q032",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "数量",
+      "text": "_____ of the two proposals meets all of our requirements, so we need a third option.",
+      "options": [
+        "Both",
+        "Every",
+        "All",
+        "Neither"
+      ],
+      "answer": 3,
+      "translation": "2つの提案はどちらも当社の要件をすべて満たさないので、3つ目の選択肢が必要です。",
+      "explanation": "neither of the two は「2つのうちどちらも〜ない」。単数動詞 meets と結びつき、文末の事情とも一致します。"
+    },
+    {
+      "id": "q033",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "動詞の形",
+      "text": "The supervisor had the technician _____ the faulty sensor.",
+      "options": [
+        "replacement",
+        "replaced",
+        "replace",
+        "to replace"
+      ],
+      "answer": 2,
+      "translation": "監督者は技術者に故障したセンサーを交換してもらいました。",
+      "explanation": "have ＋人＋動詞の原形は「人に〜してもらう／させる」。have ＋物＋過去分詞との違いに注意します。"
+    },
+    {
+      "id": "q034",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "前置詞",
+      "text": "_____ the increase in material costs, the company has kept its prices unchanged.",
+      "options": [
+        "Even",
+        "Whereas",
+        "Despite",
+        "Although"
+      ],
+      "answer": 2,
+      "translation": "材料費の上昇にもかかわらず、その会社は価格を据え置いています。",
+      "explanation": "空欄の後は名詞句 the increase ... なので前置詞 Despite。Although と Whereas の後には原則として節が必要です。"
+    },
+    {
+      "id": "q035",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "時制",
+      "text": "By the time the auditors arrived, the finance team _____ all the requested documents.",
+      "options": [
+        "has prepared",
+        "had prepared",
+        "will prepare",
+        "prepares"
+      ],
+      "answer": 1,
+      "translation": "監査担当者が到着するまでに、経理チームは要求されたすべての書類を準備し終えていました。",
+      "explanation": "過去の到着より前に準備が完了したため、過去完了形 had prepared を使います。"
+    },
+    {
+      "id": "q036",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The warranty does not _____ damage caused by improper use.",
+      "options": [
+        "consume",
+        "conduct",
+        "cover",
+        "collect"
+      ],
+      "answer": 2,
+      "translation": "保証は不適切な使用による損傷を対象としていません。",
+      "explanation": "cover は保証・保険などが「〜を対象とする」。collect は集める、consume は消費する、conduct は実施する。"
+    },
+    {
+      "id": "q037",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "関係詞",
+      "text": "The consultant, _____ recommendations reduced our costs, will return next month.",
+      "options": [
+        "which",
+        "whose",
+        "whom",
+        "who"
+      ],
+      "answer": 1,
+      "translation": "その助言によって当社の費用が削減されたコンサルタントが、来月再び来訪します。",
+      "explanation": "recommendations の所有者を示す whose。「その人の助言」という関係です。"
+    },
+    {
+      "id": "q038",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "動詞の形",
+      "text": "The revised schedule allows enough time for the equipment _____ before the event.",
+      "options": [
+        "was testing",
+        "has tested",
+        "testing",
+        "to be tested"
+      ],
+      "answer": 3,
+      "translation": "改訂された日程には、イベントの前に機材を試験するための十分な時間があります。",
+      "explanation": "for ＋対象＋to do の形。equipment は試験される側なので受け身の不定詞 to be tested を使います。"
+    },
+    {
+      "id": "q039",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "日程・会議",
+      "text": "Please _____ the updated schedule to everyone who will attend the workshop.",
+      "options": [
+        "commute",
+        "compete",
+        "compare",
+        "circulate"
+      ],
+      "answer": 3,
+      "translation": "研修会に出席する全員に、更新した日程を回覧してください。",
+      "explanation": "circulate は資料などを「回覧する／配布する」。commute は通勤する、compare は比較する、compete は競争する。"
+    },
+    {
+      "id": "q040",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "比較",
+      "text": "The revised manual explains the installation process _____ more clearly than the original.",
+      "options": [
+        "far",
+        "quite",
+        "very",
+        "many"
+      ],
+      "answer": 0,
+      "translation": "改訂版のマニュアルは、初版よりもはるかに明確に設置手順を説明しています。",
+      "explanation": "比較級 more clearly を強めるのは far。very は通常、この形の比較級を直接修飾しません。"
+    },
+    {
+      "id": "q041",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "接続詞",
+      "text": "Applicants must provide two references _____ they have previous experience with our company.",
+      "options": [
+        "as soon as",
+        "so that",
+        "even if",
+        "now that"
+      ],
+      "answer": 2,
+      "translation": "以前に当社で働いた経験があっても、応募者は照会先を2件提出しなければなりません。",
+      "explanation": "even if は「たとえ〜でも」。経験の有無にかかわらず必要という条件を示します。"
+    },
+    {
+      "id": "q042",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "After reviewing the figures, we decided to _____ our sales forecast downward.",
+      "options": [
+        "resolve",
+        "revise",
+        "retain",
+        "recruit"
+      ],
+      "answer": 1,
+      "translation": "数値を確認した後、私たちは売上予測を下方修正することにしました。",
+      "explanation": "revise a forecast は予測を修正する。retain は保持する、resolve は解決する、recruit は採用する。"
+    },
+    {
+      "id": "q043",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "品詞",
+      "text": "The proposed changes would _____ improve access for customers with limited mobility.",
+      "options": [
+        "signify",
+        "significantly",
+        "significance",
+        "significant"
+      ],
+      "answer": 1,
+      "translation": "提案された変更は、移動に制約のある顧客の利用しやすさを大幅に改善するでしょう。",
+      "explanation": "動詞 improve を修飾する副詞 significantly。「大幅に／著しく」という意味です。"
+    },
+    {
+      "id": "q044",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "動詞の形",
+      "text": "The manager recommended that the report _____ before it was sent to the client.",
+      "options": [
+        "be revised",
+        "revises",
+        "is revising",
+        "to revise"
+      ],
+      "answer": 0,
+      "translation": "マネージャーは、顧客に送る前に報告書を修正するよう勧めました。",
+      "explanation": "提案を表す recommend that の節では動詞の原形を使う形があります。report は修正される側なので be revised。"
+    },
+    {
+      "id": "q045",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "前置詞",
+      "text": "All contractors must comply _____ the building’s safety regulations.",
+      "options": [
+        "at",
+        "with",
+        "for",
+        "from"
+      ],
+      "answer": 1,
+      "translation": "すべての請負業者は、その建物の安全規則に従わなければなりません。",
+      "explanation": "comply with は「規則などに従う」。前置詞も含めたまとまりで覚えます。"
+    },
+    {
+      "id": "q046",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "時制",
+      "text": "This time next week, our team _____ the new system at the trade fair.",
+      "options": [
+        "will be demonstrating",
+        "demonstrates",
+        "has demonstrated",
+        "had demonstrated"
+      ],
+      "answer": 0,
+      "translation": "来週の今ごろ、私たちのチームは展示会で新システムを実演しているでしょう。",
+      "explanation": "未来のある時点で進行中の動作なので未来進行形 will be demonstrating が適切です。"
+    },
+    {
+      "id": "q047",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The hotel can _____ up to 300 guests in its main dining room.",
+      "options": [
+        "accomplish",
+        "accumulate",
+        "accompany",
+        "accommodate"
+      ],
+      "answer": 3,
+      "translation": "そのホテルのメインダイニングは最大300人の客を収容できます。",
+      "explanation": "accommodate は「収容する」。accumulate は蓄積する、accomplish は達成する、accompany は同行する。"
+    },
+    {
+      "id": "q048",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "接続詞",
+      "text": "The shipment will be delayed _____ the missing customs documents are received.",
+      "options": [
+        "in spite of",
+        "during",
+        "until",
+        "because of"
+      ],
+      "answer": 2,
+      "translation": "不足している通関書類を受領するまで、出荷は遅れます。",
+      "explanation": "until ＋節で「〜するまで」。後ろには主語と動詞があるため、名詞を取る during などは使えません。"
+    },
+    {
+      "id": "q049",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "代名詞",
+      "text": "The two designs are similar, but the newer _____ uses less material.",
+      "options": [
+        "other",
+        "ones",
+        "one",
+        "another"
+      ],
+      "answer": 2,
+      "translation": "2つのデザインは似ていますが、新しい方は材料をあまり使いません。",
+      "explanation": "単数の design を繰り返さずに示す one。the newer one で「より新しい方」です。"
+    },
+    {
+      "id": "q050",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The contract is _____ for one year from the date of signing.",
+      "options": [
+        "versatile",
+        "valid",
+        "vacant",
+        "visible"
+      ],
+      "answer": 1,
+      "translation": "その契約は署名日から1年間有効です。",
+      "explanation": "valid は契約などが有効な。vacant は空いている、versatile は多用途の、visible は見える。"
+    },
+    {
+      "id": "q051",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "動詞の形",
+      "text": "_____ the revised figures, the analyst updated her presentation.",
+      "options": [
+        "Has reviewed",
+        "Have reviewed",
+        "To reviewing",
+        "Having reviewed"
+      ],
+      "answer": 3,
+      "translation": "修正された数値を確認してから、分析担当者はプレゼンテーションを更新しました。",
+      "explanation": "Having ＋過去分詞の分詞構文は、主節の動作より前に完了した動作を示せます。数値を確認した後で更新しました。"
+    },
+    {
+      "id": "q052",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "関係詞",
+      "text": "The office _____ the interviews will take place is on the third floor.",
+      "options": [
+        "who",
+        "where",
+        "which",
+        "what"
+      ],
+      "answer": 1,
+      "translation": "面接が行われる事務所は3階にあります。",
+      "explanation": "後ろの the interviews will take place は場所を補えばよい節。where は in which に相当します。"
+    },
+    {
+      "id": "q053",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "日程・会議",
+      "text": "We need to _____ the schedule change with the catering team before notifying participants.",
+      "options": [
+        "coordinate",
+        "conclude",
+        "compensate",
+        "calculate"
+      ],
+      "answer": 0,
+      "translation": "参加者に知らせる前に、ケータリング担当チームと日程変更を調整する必要があります。",
+      "explanation": "coordinate ... with ... は「〜を…と調整する」。calculate は計算する、conclude は結論づける、compensate は補償する。"
+    },
+    {
+      "id": "q054",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "数量",
+      "text": "There is _____ information in the brochure to help you choose the appropriate course.",
+      "options": [
+        "enough",
+        "a few",
+        "many",
+        "several"
+      ],
+      "answer": 0,
+      "translation": "パンフレットには適切なコースを選ぶのに十分な情報があります。",
+      "explanation": "information は数えられない名詞。enough information は可能ですが、many、a few、several は可算名詞の複数形に使います。"
+    },
+    {
+      "id": "q055",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The director asked for a _____ summary rather than a detailed explanation.",
+      "options": [
+        "complex",
+        "confidential",
+        "concise",
+        "costly"
+      ],
+      "answer": 2,
+      "translation": "責任者は詳しい説明ではなく、簡潔な要約を求めました。",
+      "explanation": "rather than a detailed explanation という対比から concise（簡潔な）。confidential は機密のという別の性質です。"
+    },
+    {
+      "id": "q056",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "主語と動詞",
+      "text": "The list of approved suppliers _____ updated every quarter.",
+      "options": [
+        "is",
+        "have",
+        "are",
+        "were"
+      ],
+      "answer": 0,
+      "translation": "承認された仕入先の一覧は四半期ごとに更新されます。",
+      "explanation": "主語の中心は単数の list。近くの複数名詞 suppliers ではなく list に合わせて is updated とします。"
+    },
+    {
+      "id": "q057",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "受け身",
+      "text": "Customers are advised _____ their passwords regularly.",
+      "options": [
+        "change",
+        "changed",
+        "to change",
+        "changing"
+      ],
+      "answer": 2,
+      "translation": "顧客はパスワードを定期的に変更するよう勧められています。",
+      "explanation": "advise 人 to do の受け身は be advised to do。助言される人が主語です。"
+    },
+    {
+      "id": "q058",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "接続詞",
+      "text": "The team added a second registration desk _____ attendees would not have to wait as long.",
+      "options": [
+        "even though",
+        "so that",
+        "in case of",
+        "rather than"
+      ],
+      "answer": 1,
+      "translation": "参加者の待ち時間が短くなるよう、チームは受付窓口をもう1つ設けました。",
+      "explanation": "so that ＋節で「〜するために」という目的を表します。even though は逆接です。"
+    },
+    {
+      "id": "q059",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The manufacturer has _____ production to meet the unexpected rise in demand.",
+      "options": [
+        "interrupted",
+        "inspected",
+        "increased",
+        "inherited"
+      ],
+      "answer": 2,
+      "translation": "メーカーは予想外の需要増に対応するため、生産を増やしました。",
+      "explanation": "需要増に対応するので increased production。interrupt は中断する、inspect は検査する、inherit は受け継ぐ。"
+    },
+    {
+      "id": "q060",
+      "level": 800,
+      "kind": "cloze",
+      "skill": "比較",
+      "text": "Of the three locations under consideration, this one is the _____ accessible by public transport.",
+      "options": [
+        "much",
+        "more",
+        "many",
+        "most"
+      ],
+      "answer": 3,
+      "translation": "検討中の3つの場所のうち、ここが公共交通機関で最も行きやすい場所です。",
+      "explanation": "3つの中で最もという最上級なので the most accessible。more は比較級です。"
+    },
+    {
+      "id": "q061",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "倒置",
+      "text": "Only after the inspection _____ permission to reopen the facility.",
+      "options": [
+        "the manager received",
+        "received the manager",
+        "the manager had received",
+        "did the manager receive"
+      ],
+      "answer": 3,
+      "translation": "検査が終わって初めて、マネージャーは施設を再開する許可を受けました。",
+      "explanation": "Only after ... が文頭に来ると、主節で倒置が起きます。過去の一般動詞なので did ＋主語＋原形 receive。"
+    },
+    {
+      "id": "q062",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The preliminary agreement is not legally _____ until both parties sign the final contract.",
+      "options": [
+        "binding",
+        "binds",
+        "bound",
+        "bind"
+      ],
+      "answer": 0,
+      "translation": "予備的な合意は、両当事者が最終契約に署名するまでは法的拘束力を持ちません。",
+      "explanation": "legally binding は「法的拘束力のある」。binding が agreement の性質を表す形容詞として働きます。"
+    },
+    {
+      "id": "q063",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "接続詞",
+      "text": "The project can proceed _____ the final budget is approved by the board.",
+      "options": [
+        "regardless of",
+        "provided that",
+        "in addition to",
+        "as opposed to"
+      ],
+      "answer": 1,
+      "translation": "最終予算が取締役会に承認されることを条件に、その計画は進められます。",
+      "explanation": "後ろは節なので provided that（〜という条件で）。他の選択肢はいずれも、この形で主語＋動詞の節を直接取れません。"
+    },
+    {
+      "id": "q064",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The two departments must work together to _____ the transition to the new software.",
+      "options": [
+        "facilitate",
+        "forfeit",
+        "fluctuate",
+        "forecast"
+      ],
+      "answer": 0,
+      "translation": "新ソフトウェアへの移行を円滑に進めるため、2つの部署は協力しなければなりません。",
+      "explanation": "facilitate は「容易にする／円滑にする」。fluctuate は変動する、forfeit は失う、forecast は予測する。"
+    },
+    {
+      "id": "q065",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "時制",
+      "text": "By the end of next month, the engineers _____ the bridge repairs.",
+      "options": [
+        "had completed",
+        "have completed",
+        "were completing",
+        "will have completed"
+      ],
+      "answer": 3,
+      "translation": "来月末までに、技術者たちは橋の補修を終えているでしょう。",
+      "explanation": "未来の期限までの完了を示す未来完了形 will have completed。by the end of next month が手がかりです。"
+    },
+    {
+      "id": "q066",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "動詞の形",
+      "text": "The proposal is worth _____ despite the initial cost.",
+      "options": [
+        "considered",
+        "considering",
+        "consider",
+        "to consider"
+      ],
+      "answer": 1,
+      "translation": "初期費用はかかるものの、その提案には検討する価値があります。",
+      "explanation": "be worth doing で「〜する価値がある」。to 不定詞ではなく動名詞 considering を使います。"
+    },
+    {
+      "id": "q067",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The figures in the two reports do not match; please investigate the _____.",
+      "options": [
+        "discrepancy",
+        "consistency",
+        "compliance",
+        "consensus"
+      ],
+      "answer": 0,
+      "translation": "2つの報告書の数値が一致しません。その食い違いを調べてください。",
+      "explanation": "discrepancy は「不一致／食い違い」。consistency は一貫性、compliance は順守、consensus は合意です。"
+    },
+    {
+      "id": "q068",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "倒置",
+      "text": "Had we received the notice earlier, we _____ alternative arrangements.",
+      "options": [
+        "would making",
+        "had made",
+        "will make",
+        "would have made"
+      ],
+      "answer": 3,
+      "translation": "もっと早く通知を受けていれば、代わりの手配をしていたでしょう。",
+      "explanation": "Had we received ... は If we had received ... の if を省略した倒置。過去の反実仮想なので would have made。"
+    },
+    {
+      "id": "q069",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "前置詞",
+      "text": "Payment is due within 30 days _____ receipt of the invoice.",
+      "options": [
+        "toward",
+        "between",
+        "of",
+        "along"
+      ],
+      "answer": 2,
+      "translation": "支払い期限は請求書の受領から30日以内です。",
+      "explanation": "within 30 days of ... は「〜から30日以内」。基準となる出来事を of の後に置きます。"
+    },
+    {
+      "id": "q070",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The expansion plan remains _____ on securing additional funding.",
+      "options": [
+        "contingent",
+        "consecutive",
+        "competent",
+        "comparable"
+      ],
+      "answer": 0,
+      "translation": "拡張計画の実施は、依然として追加資金の確保を条件としています。",
+      "explanation": "be contingent on は「〜次第である／〜を条件とする」。competent は有能な、consecutive は連続した、comparable は比較可能な。"
+    },
+    {
+      "id": "q071",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "関係詞",
+      "text": "The committee received six applications, two of _____ were submitted after the deadline.",
+      "options": [
+        "what",
+        "them",
+        "whose",
+        "which"
+      ],
+      "answer": 3,
+      "translation": "委員会は6件の応募を受け取り、そのうち2件は締め切り後に提出されました。",
+      "explanation": "カンマの後を関係詞でつなぐ two of which。「そのうち2件」を表します。two of them だけでは文をこの形で接続できません。"
+    },
+    {
+      "id": "q072",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "動詞の形",
+      "text": "With all the necessary permits _____, construction can begin next week.",
+      "options": [
+        "obtain",
+        "obtaining",
+        "obtained",
+        "to obtaining"
+      ],
+      "answer": 2,
+      "translation": "必要な許可がすべて取得されたので、来週建設を開始できます。",
+      "explanation": "with ＋名詞＋補語の形。permits は取得される側なので過去分詞 obtained を使います。"
+    },
+    {
+      "id": "q073",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The new procedure will _____ the need for staff to enter the same data twice.",
+      "options": [
+        "encounter",
+        "estimate",
+        "elaborate",
+        "eliminate"
+      ],
+      "answer": 3,
+      "translation": "新しい手順によって、職員が同じデータを2度入力する必要がなくなります。",
+      "explanation": "eliminate the need for ... は「〜の必要をなくす」。elaborate は詳しく説明する、estimate は見積もる、encounter は遭遇する。"
+    },
+    {
+      "id": "q074",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "接続詞",
+      "text": "_____ demand continue to rise, the company will open a second production line.",
+      "options": [
+        "Unless",
+        "Whether",
+        "Despite",
+        "Should"
+      ],
+      "answer": 3,
+      "translation": "需要が引き続き増加する場合、その会社は2本目の生産ラインを稼働させます。",
+      "explanation": "Should ＋主語＋動詞の原形は、if を使わずに「もし〜なら」を表す条件の倒置です。"
+    },
+    {
+      "id": "q075",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "比較",
+      "text": "The more clearly the requirements are defined, the _____ misunderstandings there will be.",
+      "options": [
+        "fewer",
+        "fewest",
+        "less",
+        "least"
+      ],
+      "answer": 0,
+      "translation": "要件を明確に定めれば定めるほど、誤解は少なくなります。",
+      "explanation": "the ＋比較級 ..., the ＋比較級 ... の構文。misunderstandings は複数の可算名詞なので fewer。"
+    },
+    {
+      "id": "q076",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "Because of the venue’s limited capacity, attendance is _____ to registered delegates.",
+      "options": [
+        "recruited",
+        "restored",
+        "restricted",
+        "referred"
+      ],
+      "answer": 2,
+      "translation": "会場の収容人数が限られているため、参加は登録済みの代表者に制限されています。",
+      "explanation": "be restricted to は「〜に限定される」。restore は復旧する、refer は言及する、recruit は募集する。"
+    },
+    {
+      "id": "q077",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "品詞",
+      "text": "The replacement parts are _____ available from authorized dealers.",
+      "options": [
+        "readied",
+        "readily",
+        "ready",
+        "readiness"
+      ],
+      "answer": 1,
+      "translation": "交換部品は正規販売店で容易に入手できます。",
+      "explanation": "readily available は「容易に入手できる」。副詞 readily が形容詞 available を修飾します。"
+    },
+    {
+      "id": "q078",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "動詞の形",
+      "text": "The supplier denied _____ the specifications without prior approval.",
+      "options": [
+        "changes",
+        "change",
+        "changing",
+        "to change"
+      ],
+      "answer": 2,
+      "translation": "仕入先は、事前承認なしに仕様を変更したことを否定しました。",
+      "explanation": "deny は目的語に動名詞を取る動詞です。deny doing で「〜したことを否定する」。"
+    },
+    {
+      "id": "q079",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The director’s main _____ is that the proposed timetable leaves no room for testing.",
+      "options": [
+        "contribution",
+        "consent",
+        "consequence",
+        "concern"
+      ],
+      "answer": 3,
+      "translation": "責任者の主な懸念は、提案された日程には試験の余地がないことです。",
+      "explanation": "concern は懸念。consent は同意、consequence は結果、contribution は貢献です。that 節が懸念の内容を説明します。"
+    },
+    {
+      "id": "q080",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "接続詞",
+      "text": "No matter _____ carefully the budget is prepared, unexpected expenses may arise.",
+      "options": [
+        "which",
+        "what",
+        "how",
+        "whose"
+      ],
+      "answer": 2,
+      "translation": "予算をどれほど入念に作成しても、予想外の支出が生じる可能性があります。",
+      "explanation": "no matter how ＋形容詞・副詞で「どれほど〜でも」。ここでは副詞 carefully の程度を表します。"
+    },
+    {
+      "id": "q081",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The revised policy will _____ all previous versions when it takes effect on October 1.",
+      "options": [
+        "subscribe",
+        "supervise",
+        "supersede",
+        "subsidize"
+      ],
+      "answer": 2,
+      "translation": "改訂された方針は10月1日に発効すると、以前のすべての版に取って代わります。",
+      "explanation": "supersede は「取って代わる」。subscribe は購読する、subsidize は補助金を出す、supervise は監督する。"
+    },
+    {
+      "id": "q082",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "動詞の形",
+      "text": "We would appreciate _____ informed of any changes to the delivery date.",
+      "options": [
+        "keeping us",
+        "to keep",
+        "keep",
+        "being kept"
+      ],
+      "answer": 3,
+      "translation": "納品日の変更があれば、お知らせいただけると幸いです。",
+      "explanation": "appreciate は動名詞を取ります。私たちは情報を知らされる側なので being kept informed（知らされていること）。"
+    },
+    {
+      "id": "q083",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The trial results were _____, so further testing is needed before a decision can be made.",
+      "options": [
+        "inflexible",
+        "inconclusive",
+        "inevitable",
+        "inexpensive"
+      ],
+      "answer": 1,
+      "translation": "試験結果では結論が出なかったため、決定する前に追加の試験が必要です。",
+      "explanation": "inconclusive は結論を導けない。inevitable は避けられない、inflexible は柔軟性がない、inexpensive は安価な。"
+    },
+    {
+      "id": "q084",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "関係詞",
+      "text": "_____ is selected for the role will receive training before starting work.",
+      "options": [
+        "Whose",
+        "Whoever",
+        "Whomever",
+        "Whom"
+      ],
+      "answer": 1,
+      "translation": "その職務に誰が選ばれても、勤務開始前に研修を受けます。",
+      "explanation": "Whoever が is selected の主語になり、節全体が will receive の主語になります。Whomever は目的格です。"
+    },
+    {
+      "id": "q085",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The company agreed to _____ employees for travel expenses incurred during the project.",
+      "options": [
+        "reimburse",
+        "relocate",
+        "resume",
+        "remind"
+      ],
+      "answer": 0,
+      "translation": "その会社は、プロジェクト中に発生した旅費を従業員に払い戻すことに同意しました。",
+      "explanation": "reimburse 人 for 費用 で「人に費用を払い戻す」。remind は思い出させる、resume は再開する、relocate は移転させる。"
+    },
+    {
+      "id": "q086",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "動詞の形",
+      "text": "The equipment must be inspected before _____ put back into service.",
+      "options": [
+        "being",
+        "been",
+        "be",
+        "is"
+      ],
+      "answer": 0,
+      "translation": "その機器は再び使用する前に点検しなければなりません。",
+      "explanation": "before の後で受け身を作る動名詞 being put。before it is put ... の it を省いて is だけにはできません。"
+    },
+    {
+      "id": "q087",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "Demand is expected to _____ during the winter, then recover in spring.",
+      "options": [
+        "decline",
+        "delegate",
+        "depict",
+        "derive"
+      ],
+      "answer": 0,
+      "translation": "需要は冬の間に減少し、春に回復すると予想されています。",
+      "explanation": "recover と対になる decline（減少する）。delegate は委任する、derive は由来する、depict は描写する。"
+    },
+    {
+      "id": "q088",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "数量",
+      "text": "_____ information has been provided about the proposed merger, leaving investors uncertain.",
+      "options": [
+        "Little",
+        "Few",
+        "Many",
+        "Several"
+      ],
+      "answer": 0,
+      "translation": "提案された合併についてはほとんど情報が提供されておらず、投資家は見通しを持てずにいます。",
+      "explanation": "information は不可算名詞なので Little。「ほとんど〜ない」という否定的な意味が leaving investors uncertain と一致します。"
+    },
+    {
+      "id": "q089",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "語彙",
+      "text": "The firm is seeking a _____ solution that can be maintained without exceeding its budget.",
+      "options": [
+        "successive",
+        "sustainable",
+        "superficial",
+        "susceptible"
+      ],
+      "answer": 1,
+      "translation": "その会社は、予算を超えずに維持できる持続可能な解決策を求めています。",
+      "explanation": "sustainable は持続可能な。susceptible は影響を受けやすい、successive は連続する、superficial は表面的な。"
+    },
+    {
+      "id": "q090",
+      "level": 850,
+      "kind": "cloze",
+      "skill": "接続詞",
+      "text": "The offer applies to all items in stock, _____ those already marked down.",
+      "options": [
+        "except",
+        "unless",
+        "although",
+        "whereas"
+      ],
+      "answer": 0,
+      "translation": "その特典は、すでに値下げされたものを除く、在庫のあるすべての商品に適用されます。",
+      "explanation": "except ＋名詞句で「〜を除いて」。those already marked down は「すでに値下げされた商品」です。"
+    },
+    {
+      "id": "q091",
+      "level": 730,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "日程変更のメール",
+      "passage": "To: Sales Team\nSubject: Thursday’s meeting\n\nThursday’s sales meeting has been moved from Room 2 to Room 5 because a projector is being repaired in Room 2. The starting time remains 10:00 a.m. Please bring a printed copy of your monthly results.",
+      "text": "What has changed about the meeting?",
+      "options": [
+        "Its topic",
+        "Its date",
+        "Its location",
+        "Its starting time"
+      ],
+      "answer": 2,
+      "translation": "質問：会議について何が変更されましたか。\n正解：場所。",
+      "explanation": "Room 2 から Room 5 への変更です。開始時刻は remains（変わらない）と明記されています。",
+      "proof": "has been moved from Room 2 to Room 5"
+    },
+    {
+      "id": "q092",
+      "level": 730,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "日程変更のメール",
+      "passage": "To: Sales Team\nSubject: Thursday’s meeting\n\nThursday’s sales meeting has been moved from Room 2 to Room 5 because a projector is being repaired in Room 2. The starting time remains 10:00 a.m. Please bring a printed copy of your monthly results.",
+      "text": "What should team members bring?",
+      "options": [
+        "A list of customers",
+        "A room reservation form",
+        "A new projector",
+        "A paper copy of their results"
+      ],
+      "answer": 3,
+      "translation": "質問：チームのメンバーは何を持参する必要がありますか。\n正解：業績の紙の写し。",
+      "explanation": "printed copy が paper copy に言い換えられています。",
+      "proof": "Please bring a printed copy of your monthly results."
+    },
+    {
+      "id": "q093",
+      "level": 730,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "配達のお知らせ",
+      "passage": "Delivery update\n\nYour desk was scheduled to arrive on Tuesday. Due to a vehicle problem, it will now arrive on Wednesday between 1:00 and 3:00 p.m. If this time is inconvenient, call us by 6:00 p.m. today to arrange another delivery time. There is no additional charge.",
+      "text": "When will the desk now arrive?",
+      "options": [
+        "On Wednesday morning",
+        "On Tuesday afternoon",
+        "On Wednesday afternoon",
+        "On Tuesday morning"
+      ],
+      "answer": 2,
+      "translation": "質問：机は変更後、いつ到着しますか。\n正解：水曜日の午後。",
+      "explanation": "変更前の Tuesday ではなく、it will now arrive の後の Wednesday と午後1〜3時を確認します。",
+      "proof": "it will now arrive on Wednesday between 1:00 and 3:00 p.m."
+    },
+    {
+      "id": "q094",
+      "level": 730,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "配達のお知らせ",
+      "passage": "Delivery update\n\nYour desk was scheduled to arrive on Tuesday. Due to a vehicle problem, it will now arrive on Wednesday between 1:00 and 3:00 p.m. If this time is inconvenient, call us by 6:00 p.m. today to arrange another delivery time. There is no additional charge.",
+      "text": "Why would a customer call the company?",
+      "options": [
+        "To pay an extra fee",
+        "To order a replacement desk",
+        "To request a different delivery time",
+        "To report a missing instruction sheet"
+      ],
+      "answer": 2,
+      "translation": "質問：顧客は何のために会社へ電話しますか。\n正解：別の配達時間を依頼するため。",
+      "explanation": "都合が悪い場合に別の時間を調整するための電話です。追加料金は不要です。",
+      "proof": "call us by 6:00 p.m. today to arrange another delivery time"
+    },
+    {
+      "id": "q095",
+      "level": 730,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "研修会の案内",
+      "passage": "New employee workshop\n\nThe customer service workshop will take place on June 12 from 2:00 to 4:00 p.m. in the training center. All new employees must attend. Experienced employees may join if space is available. Register through the staff website by June 5.",
+      "text": "Who is required to attend?",
+      "options": [
+        "Customers with complaints",
+        "All new employees",
+        "All experienced employees",
+        "Only department managers"
+      ],
+      "answer": 1,
+      "translation": "質問：出席が義務づけられているのは誰ですか。\n正解：新入社員全員。",
+      "explanation": "must attend は出席義務、may join は参加可能という意味です。対象を混同しないようにします。",
+      "proof": "All new employees must attend."
+    },
+    {
+      "id": "q096",
+      "level": 730,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "研修会の案内",
+      "passage": "New employee workshop\n\nThe customer service workshop will take place on June 12 from 2:00 to 4:00 p.m. in the training center. All new employees must attend. Experienced employees may join if space is available. Register through the staff website by June 5.",
+      "text": "How should employees register?",
+      "options": [
+        "By calling the training center",
+        "By replying to a printed notice",
+        "By visiting customer service",
+        "Through the staff website"
+      ],
+      "answer": 3,
+      "translation": "質問：従業員はどのように登録しますか。\n正解：職員向けウェブサイトから。",
+      "explanation": "Register through ... の後に登録方法が示されています。",
+      "proof": "Register through the staff website by June 5."
+    },
+    {
+      "id": "q097",
+      "level": 730,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "店舗営業時間の案内",
+      "passage": "Harbor Office Supplies\n\nStarting April 1, our store will open at 8:00 a.m. on weekdays, one hour earlier than before. Saturday hours will remain 10:00 a.m. to 6:00 p.m. We are closed on Sundays. Online orders can be placed at any time.",
+      "text": "What time did the store previously open on weekdays?",
+      "options": [
+        "At 9:00 a.m.",
+        "At 7:00 a.m.",
+        "At 8:00 a.m.",
+        "At 10:00 a.m."
+      ],
+      "answer": 0,
+      "translation": "質問：以前の平日の開店時刻は何時でしたか。\n正解：午前9時。",
+      "explanation": "新しい開店時刻は8時で、以前より1時間早いので、以前は9時です。",
+      "proof": "8:00 a.m. on weekdays, one hour earlier than before"
+    },
+    {
+      "id": "q098",
+      "level": 730,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "店舗営業時間の案内",
+      "passage": "Harbor Office Supplies\n\nStarting April 1, our store will open at 8:00 a.m. on weekdays, one hour earlier than before. Saturday hours will remain 10:00 a.m. to 6:00 p.m. We are closed on Sundays. Online orders can be placed at any time.",
+      "text": "What is available on Sundays?",
+      "options": [
+        "Shopping inside the store",
+        "Attending a sales event",
+        "Placing an order online",
+        "Collecting an order at the store"
+      ],
+      "answer": 2,
+      "translation": "質問：日曜日に利用できるのは何ですか。\n正解：オンラインで注文すること。",
+      "explanation": "店舗は日曜休業ですが、オンライン注文は at any time（いつでも）可能です。",
+      "proof": "Online orders can be placed at any time."
+    },
+    {
+      "id": "q099",
+      "level": 730,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "備品貸出のメモ",
+      "passage": "To all staff\n\nPortable projectors can be borrowed from the IT desk for up to three days. Please reserve one at least two working days before you need it. Return all cables with the projector. Staff who need equipment for longer should contact the IT manager before making a reservation.",
+      "text": "How far in advance should a projector be reserved?",
+      "options": [
+        "At least two working days",
+        "On the day it is needed",
+        "At least three calendar days",
+        "One week"
+      ],
+      "answer": 0,
+      "translation": "質問：プロジェクターは少なくともどれだけ前に予約すべきですか。\n正解：2営業日前。",
+      "explanation": "貸出期間の3日と、予約期限の2営業日前を区別します。",
+      "proof": "at least two working days before you need it"
+    },
+    {
+      "id": "q100",
+      "level": 730,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "備品貸出のメモ",
+      "passage": "To all staff\n\nPortable projectors can be borrowed from the IT desk for up to three days. Please reserve one at least two working days before you need it. Return all cables with the projector. Staff who need equipment for longer should contact the IT manager before making a reservation.",
+      "text": "What should staff do to borrow equipment for more than three days?",
+      "options": [
+        "Contact the IT manager first",
+        "Return the cables separately",
+        "Make two online reservations",
+        "Ask a colleague to collect it"
+      ],
+      "answer": 0,
+      "translation": "質問：3日を超えて機材を借りるには何をすべきですか。\n正解：最初にITマネージャーへ連絡する。",
+      "explanation": "長期利用は予約前に相談が必要です。",
+      "proof": "contact the IT manager before making a reservation"
+    },
+    {
+      "id": "q101",
+      "level": 800,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "ホテルからの返信",
+      "passage": "Dear Ms. Rivera,\n\nWe can accommodate your group of 18 in our private dining room on August 22. The room is available from 6:30 p.m., but your requested 6:00 p.m. start is not possible because of an earlier event. The meal price includes coffee and tea; other soft drinks are charged separately. Please confirm the revised time by Friday to secure the room.\n\nBest regards,\nHarbor Hotel",
+      "text": "What does the hotel ask Ms. Rivera to confirm?",
+      "options": [
+        "Whether the event can move to another date",
+        "Whether the group has fewer than 18 people",
+        "Whether coffee should be removed from the menu",
+        "Whether a later starting time is acceptable"
+      ],
+      "answer": 3,
+      "translation": "質問：ホテルはリベラさんに何の確認を求めていますか。\n正解：開始時刻を遅らせてもよいか。",
+      "explanation": "希望の6時ではなく6時半からなら可能です。revised time はこの変更を指します。",
+      "proof": "Please confirm the revised time by Friday to secure the room."
+    },
+    {
+      "id": "q102",
+      "level": 800,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "ホテルからの返信",
+      "passage": "Dear Ms. Rivera,\n\nWe can accommodate your group of 18 in our private dining room on August 22. The room is available from 6:30 p.m., but your requested 6:00 p.m. start is not possible because of an earlier event. The meal price includes coffee and tea; other soft drinks are charged separately. Please confirm the revised time by Friday to secure the room.\n\nBest regards,\nHarbor Hotel",
+      "text": "Which statement is supported by the email?",
+      "options": [
+        "All beverages are included in the meal price",
+        "The dining room holds no more than 18 people",
+        "The room is available throughout the evening",
+        "Some nonalcoholic drinks cost extra"
+      ],
+      "answer": 3,
+      "translation": "質問：メールに合致するのはどれですか。\n正解：一部のノンアルコール飲料は追加料金がかかる。",
+      "explanation": "コーヒーと紅茶は料金に含まれますが、other soft drinks は別料金です。18人を収容できることから最大定員までは断定できません。",
+      "proof": "other soft drinks are charged separately"
+    },
+    {
+      "id": "q103",
+      "level": 800,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "在庫変更と注文",
+      "passage": "Subject: Order 481\n\nThe blue notebooks you ordered are temporarily unavailable. We can ship the same model in gray immediately, or send the blue ones when they arrive in approximately two weeks. Both colors are the same price. Unless we hear from you by noon tomorrow, we will keep your order unchanged and wait for the blue notebooks.",
+      "text": "What will happen if the customer does not reply?",
+      "options": [
+        "Gray notebooks will be shipped immediately",
+        "The company will wait to ship the blue notebooks",
+        "The customer will receive both colors",
+        "The order will be canceled"
+      ],
+      "answer": 1,
+      "translation": "質問：顧客が返信しない場合、どうなりますか。\n正解：会社は青いノートの発送を待つ。",
+      "explanation": "Unless we hear from you（連絡がない限り）に続く既定の対応を読み取ります。",
+      "proof": "we will keep your order unchanged and wait for the blue notebooks"
+    },
+    {
+      "id": "q104",
+      "level": 800,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "在庫変更と注文",
+      "passage": "Subject: Order 481\n\nThe blue notebooks you ordered are temporarily unavailable. We can ship the same model in gray immediately, or send the blue ones when they arrive in approximately two weeks. Both colors are the same price. Unless we hear from you by noon tomorrow, we will keep your order unchanged and wait for the blue notebooks.",
+      "text": "What is an advantage of choosing gray notebooks?",
+      "options": [
+        "They include free accessories",
+        "They are a larger model",
+        "They have a lower price",
+        "They can be dispatched sooner"
+      ],
+      "answer": 3,
+      "translation": "質問：灰色のノートを選ぶ利点は何ですか。\n正解：より早く発送できる。",
+      "explanation": "ship immediately が dispatched sooner に言い換えられています。価格は同じです。",
+      "proof": "We can ship the same model in gray immediately"
+    },
+    {
+      "id": "q105",
+      "level": 800,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "展示会のチャット",
+      "passage": "Mina, 9:10: The sample boxes arrived, but the printed brochures are still missing.\nAlex, 9:12: The courier expects to deliver them at 11. Our booth opens at 10.\nMina, 9:14: Then let’s display the QR code for the digital brochure until they get here.\nAlex, 9:15: Good idea. I’ll print a large sign now.",
+      "text": "What problem are Mina and Alex addressing?",
+      "options": [
+        "Visitors will arrive before the printed brochures do",
+        "The booth has been assigned the wrong location",
+        "The digital brochure cannot be opened",
+        "The sample boxes contain the wrong products"
+      ],
+      "answer": 0,
+      "translation": "質問：ミナとアレックスは何の問題に対応していますか。\n正解：印刷パンフレットが届く前に来場者が来ること。",
+      "explanation": "ブースの開始は10時、パンフレットの到着予定は11時。この時間差が問題です。",
+      "proof": "The courier expects to deliver them at 11. Our booth opens at 10."
+    },
+    {
+      "id": "q106",
+      "level": 800,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "展示会のチャット",
+      "passage": "Mina, 9:10: The sample boxes arrived, but the printed brochures are still missing.\nAlex, 9:12: The courier expects to deliver them at 11. Our booth opens at 10.\nMina, 9:14: Then let’s display the QR code for the digital brochure until they get here.\nAlex, 9:15: Good idea. I’ll print a large sign now.",
+      "text": "What will Alex most likely put on the sign?",
+      "options": [
+        "A list of courier charges",
+        "A notice canceling the event",
+        "A new delivery address",
+        "A QR code for a brochure"
+      ],
+      "answer": 3,
+      "translation": "質問：アレックスは案内表示におそらく何を載せますか。\n正解：パンフレット用のQRコード。",
+      "explanation": "QRコードを掲示する提案に Good idea と応じ、sign を印刷すると言っています。",
+      "proof": "let’s display the QR code for the digital brochure"
+    },
+    {
+      "id": "q107",
+      "level": 800,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "社内制度の更新",
+      "passage": "Remote work update\n\nFrom September, employees may work remotely up to two days per week after receiving their supervisor’s approval. The policy does not apply during the first three months of employment. Teams must still arrange at least one day each week when all members work in the office. Existing equipment allowances will not change.",
+      "text": "Who cannot yet use the new policy?",
+      "options": [
+        "An employee who joined one month ago",
+        "An employee who already owns a laptop",
+        "A supervisor with five years of service",
+        "An employee who works in a large team"
+      ],
+      "answer": 0,
+      "translation": "質問：まだ新制度を利用できないのは誰ですか。\n正解：1か月前に入社した従業員。",
+      "explanation": "入社後3か月間は対象外なので、入社1か月の人は利用できません。",
+      "proof": "The policy does not apply during the first three months of employment."
+    },
+    {
+      "id": "q108",
+      "level": 800,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "社内制度の更新",
+      "passage": "Remote work update\n\nFrom September, employees may work remotely up to two days per week after receiving their supervisor’s approval. The policy does not apply during the first three months of employment. Teams must still arrange at least one day each week when all members work in the office. Existing equipment allowances will not change.",
+      "text": "What must each team do?",
+      "options": [
+        "Work remotely on the same two days",
+        "Increase its equipment allowance",
+        "Request permission from every department",
+        "Choose a weekly day for everyone to attend the office"
+      ],
+      "answer": 3,
+      "translation": "質問：各チームは何をしなければなりませんか。\n正解：全員が出社する曜日を毎週設ける。",
+      "explanation": "週に少なくとも1日は全員が出社するよう調整するという要件です。",
+      "proof": "at least one day each week when all members work in the office"
+    },
+    {
+      "id": "q109",
+      "level": 800,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "修理サービスの案内",
+      "passage": "Dear Mr. Owens,\n\nWe have inspected your printer. The damaged roller is covered by your service plan, so there is no repair charge. However, the replacement part must be ordered and will arrive on Monday. Repair should be completed the following day. A loan printer is available at no cost if you collect it from our service center.",
+      "text": "When is the repair expected to be finished?",
+      "options": [
+        "On Wednesday",
+        "On Monday",
+        "On Tuesday",
+        "On Sunday"
+      ],
+      "answer": 2,
+      "translation": "質問：修理はいつ完了する見込みですか。\n正解：火曜日。",
+      "explanation": "部品到着が月曜日、その翌日に完了するので火曜日です。",
+      "proof": "will arrive on Monday. Repair should be completed the following day."
+    },
+    {
+      "id": "q110",
+      "level": 800,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "修理サービスの案内",
+      "passage": "Dear Mr. Owens,\n\nWe have inspected your printer. The damaged roller is covered by your service plan, so there is no repair charge. However, the replacement part must be ordered and will arrive on Monday. Repair should be completed the following day. A loan printer is available at no cost if you collect it from our service center.",
+      "text": "What is required to use the loan printer for free?",
+      "options": [
+        "Extending the service plan",
+        "Returning the original printer first",
+        "Picking it up at the service center",
+        "Paying for the replacement roller"
+      ],
+      "answer": 2,
+      "translation": "質問：代替プリンターを無料で利用するには何が必要ですか。\n正解：サービスセンターで受け取ること。",
+      "explanation": "if you collect it が無料貸出の条件です。修理代が無料であることとは別の条件です。",
+      "proof": "at no cost if you collect it from our service center"
+    },
+    {
+      "id": "q111",
+      "level": 850,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "案内と返信の照合",
+      "passage": "DOCUMENT 1 — Seminar notice\n\nThe professional writing seminar on May 18 costs $120 per person. Groups of five or more receive a 15% discount if a single payment is made for the whole group. Registration closes May 10. A digital workbook is included.\n\nDOCUMENT 2 — Email\n\nHi Nora,\nFour colleagues and I will attend the May 18 seminar. Please register all of us together and make one payment using the department card. We do not need printed workbooks. Thanks, Leo.",
+      "text": "How much should Nora pay for the group?",
+      "options": [
+        "$408",
+        "$480",
+        "$510",
+        "$600"
+      ],
+      "answer": 2,
+      "translation": "質問：ノラはグループ分としていくら支払うべきですか。\n正解：510ドル。",
+      "explanation": "Four colleagues and I は5人。5人で一括払いなので15%引きです。120×5×0.85＝510。",
+      "proof": "Groups of five or more receive a 15% discount if a single payment is made"
+    },
+    {
+      "id": "q112",
+      "level": 850,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "案内と返信の照合",
+      "passage": "DOCUMENT 1 — Seminar notice\n\nThe professional writing seminar on May 18 costs $120 per person. Groups of five or more receive a 15% discount if a single payment is made for the whole group. Registration closes May 10. A digital workbook is included.\n\nDOCUMENT 2 — Email\n\nHi Nora,\nFour colleagues and I will attend the May 18 seminar. Please register all of us together and make one payment using the department card. We do not need printed workbooks. Thanks, Leo.",
+      "text": "Why does Leo ask Nora to make one payment?",
+      "options": [
+        "To meet a condition for the group discount",
+        "To reserve a private classroom",
+        "To register after the deadline",
+        "To receive a free printed workbook"
+      ],
+      "answer": 0,
+      "translation": "質問：レオが一括払いを頼むのはなぜですか。\n正解：団体割引の条件を満たすため。",
+      "explanation": "案内の条件と、メールの make one payment を照合します。印刷物に関する割引は記載されていません。",
+      "proof": "if a single payment is made for the whole group"
+    },
+    {
+      "id": "q113",
+      "level": 850,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "会場一覧と依頼の照合",
+      "passage": "DOCUMENT 1 — Available rooms, October 6\n\nOak: up to 24 people; available 9 a.m.–noon; projector included.\nMaple: up to 40 people; available 1–5 p.m.; projector included.\nPine: up to 32 people; available 9 a.m.–5 p.m.; no projector.\n\nDOCUMENT 2 — Email\n\nWe need a room for 30 people from 2 to 4 p.m. on October 6. A projector is essential, and we cannot bring our own. Please book a room that meets all three requirements.",
+      "text": "Which room meets all the requirements?",
+      "options": [
+        "Oak",
+        "Maple",
+        "Pine",
+        "None of the rooms"
+      ],
+      "answer": 1,
+      "translation": "質問：すべての条件に合う部屋はどれですか。\n正解：Maple。",
+      "explanation": "30人・午後2〜4時・プロジェクターの3条件を照合します。Oak は定員と時間、Pine は機材が合いません。",
+      "proof": "Maple: up to 40 people; available 1–5 p.m.; projector included."
+    },
+    {
+      "id": "q114",
+      "level": 850,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "会場一覧と依頼の照合",
+      "passage": "DOCUMENT 1 — Available rooms, October 6\n\nOak: up to 24 people; available 9 a.m.–noon; projector included.\nMaple: up to 40 people; available 1–5 p.m.; projector included.\nPine: up to 32 people; available 9 a.m.–5 p.m.; no projector.\n\nDOCUMENT 2 — Email\n\nWe need a room for 30 people from 2 to 4 p.m. on October 6. A projector is essential, and we cannot bring our own. Please book a room that meets all three requirements.",
+      "text": "Why is Pine unsuitable?",
+      "options": [
+        "It is unavailable in the afternoon",
+        "It lacks a required piece of equipment",
+        "It can only be rented for a full day",
+        "It is too small for the group"
+      ],
+      "answer": 1,
+      "translation": "質問：Pine が不適切なのはなぜですか。\n正解：必要な機材がないため。",
+      "explanation": "定員と時間は満たしますが、projector is essential に対して no projector です。",
+      "proof": "Pine: up to 32 people; available 9 a.m.–5 p.m.; no projector."
+    },
+    {
+      "id": "q115",
+      "level": 850,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "採用担当者のメール",
+      "passage": "Dear Ms. Ahmed,\n\nYour experience closely matches our needs, and we would like to invite you to a final interview. We had hoped to meet in person; however, the hiring manager will be traveling throughout the interview week. A video interview would therefore be the most practical option. Please send two suitable time slots, taking into account that our office is three hours behind your local time.\n\nRegards,\nRecruitment Team",
+      "text": "Why does the recruitment team propose a video interview?",
+      "options": [
+        "The company no longer holds final interviews",
+        "The office has permanently closed",
+        "The applicant lacks relevant experience",
+        "The hiring manager will be away"
+      ],
+      "answer": 3,
+      "translation": "質問：採用担当者がビデオ面接を提案するのはなぜですか。\n正解：採用マネージャーが不在になるため。",
+      "explanation": "当初は対面を希望したが、マネージャーが出張中なのでビデオが現実的だという流れです。",
+      "proof": "the hiring manager will be traveling throughout the interview week"
+    },
+    {
+      "id": "q116",
+      "level": 850,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "採用担当者のメール",
+      "passage": "Dear Ms. Ahmed,\n\nYour experience closely matches our needs, and we would like to invite you to a final interview. We had hoped to meet in person; however, the hiring manager will be traveling throughout the interview week. A video interview would therefore be the most practical option. Please send two suitable time slots, taking into account that our office is three hours behind your local time.\n\nRegards,\nRecruitment Team",
+      "text": "If Ms. Ahmed proposes 3 p.m. in her local time, what time is it at the office?",
+      "options": [
+        "3 p.m.",
+        "12 noon",
+        "6 p.m.",
+        "9 a.m."
+      ],
+      "answer": 1,
+      "translation": "質問：アーメドさんが現地時間の午後3時を提案した場合、事務所では何時ですか。\n正解：正午。",
+      "explanation": "事務所は本人の現地時間より3時間遅いので、15時−3時間＝12時です。",
+      "proof": "our office is three hours behind your local time"
+    },
+    {
+      "id": "q117",
+      "level": 850,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "提案への慎重な返信",
+      "passage": "Dear Daniel,\n\nThe pilot program has reduced processing time, which is encouraging. Still, the test involved only our smallest branch. Before committing to a company-wide launch, I would like to see results from a location with a much higher transaction volume. Could you extend the trial to the Central branch and report back at the end of the month?\n\nHelen",
+      "text": "What is Helen’s position on a company-wide launch?",
+      "options": [
+        "She believes the pilot has failed entirely",
+        "She wants broader evidence before deciding",
+        "She wants to abandon the software immediately",
+        "She has approved it without conditions"
+      ],
+      "answer": 1,
+      "translation": "質問：全社導入に対するヘレンの立場はどれですか。\n正解：決定前に、より広い条件での根拠を求めている。",
+      "explanation": "効果は認めていますが、小規模支店だけでは判断せず、大量の取引がある支店の結果を求めています。",
+      "proof": "Before committing to a company-wide launch, I would like to see results from a location with a much higher transaction volume."
+    },
+    {
+      "id": "q118",
+      "level": 850,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "提案への慎重な返信",
+      "passage": "Dear Daniel,\n\nThe pilot program has reduced processing time, which is encouraging. Still, the test involved only our smallest branch. Before committing to a company-wide launch, I would like to see results from a location with a much higher transaction volume. Could you extend the trial to the Central branch and report back at the end of the month?\n\nHelen",
+      "text": "Why is the Central branch most likely being selected?",
+      "options": [
+        "It has already finished the trial",
+        "It is the company’s smallest location",
+        "It can test the program under a heavier workload",
+        "It has requested shorter opening hours"
+      ],
+      "answer": 2,
+      "translation": "質問：Central 支店が選ばれた理由として最も考えられるのはどれですか。\n正解：より大きい業務量でプログラムを試せるため。",
+      "explanation": "高い取引量の場所の結果がほしいと述べ、その直後に Central 支店への拡張を依頼しています。文脈からの推論です。",
+      "proof": "a location with a much higher transaction volume"
+    },
+    {
+      "id": "q119",
+      "level": 850,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "変更通知と顧客の返信",
+      "passage": "DOCUMENT 1 — Supplier notice\n\nEffective July 1, orders below $200 will incur a $15 shipping fee. Orders of $200 or more will continue to ship free. The threshold is based on the value of goods after discounts, excluding tax.\n\nDOCUMENT 2 — Customer email, July 3\n\nOur order total is $210 before our 10% loyalty discount and before tax. I assumed delivery would be free, but a shipping fee appears at checkout. Could you check whether the charge is correct?",
+      "text": "Why does a shipping fee appear?",
+      "options": [
+        "Tax has increased the goods total above $200",
+        "The discounted goods total is below the free-shipping threshold",
+        "Loyalty customers are excluded from free shipping",
+        "The customer ordered before July 1"
+      ],
+      "answer": 1,
+      "translation": "質問：配送料が表示されるのはなぜですか。\n正解：割引後の商品額が送料無料の基準未満だから。",
+      "explanation": "210ドルの10%引きは189ドル。基準は割引前ではなく割引後なので、200ドルに届きません。",
+      "proof": "The threshold is based on the value of goods after discounts, excluding tax."
+    },
+    {
+      "id": "q120",
+      "level": 850,
+      "kind": "reading",
+      "skill": "読解",
+      "title": "変更通知と顧客の返信",
+      "passage": "DOCUMENT 1 — Supplier notice\n\nEffective July 1, orders below $200 will incur a $15 shipping fee. Orders of $200 or more will continue to ship free. The threshold is based on the value of goods after discounts, excluding tax.\n\nDOCUMENT 2 — Customer email, July 3\n\nOur order total is $210 before our 10% loyalty discount and before tax. I assumed delivery would be free, but a shipping fee appears at checkout. Could you check whether the charge is correct?",
+      "text": "What is the order total including shipping but excluding tax?",
+      "options": [
+        "$200",
+        "$204",
+        "$189",
+        "$225"
+      ],
+      "answer": 1,
+      "translation": "質問：配送料を含み、税金を除いた注文総額はいくらですか。\n正解：204ドル。",
+      "explanation": "商品210×0.9＝189ドルに、配送料15ドルを加えて204ドルです。",
+      "proof": "orders below $200 will incur a $15 shipping fee"
+    }
+  ]
+}

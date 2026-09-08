@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packId": "example-extra-1",
+  "title": "追加パックの例",
+  "questions": [
+    {
+      "id": "extra-001",
+      "level": 730,
+      "kind": "cloze",
+      "skill": "日程・会議",
+      "text": "Please _____ your availability for the interview by replying to this email.",
+      "options": [
+        "confirm",
+        "compete",
+        "consume",
+        "commute"
+      ],
+      "answer": 0,
+      "translation": "このメールに返信して、面接への参加が可能かどうか確認してください。",
+      "explanation": "confirm your availability は「都合がつくかどうかを確認する」。compete は競争する、consume は消費する、commute は通勤するです。"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "method": "Node VM with simulated Cache API, fetch and worker lifecycle; not actual browser offline mode",
+  "passed": [
+    "Initial install caches all five required assets",
+    "Activation claims clients and preserves other application caches",
+    "Ready status requires all required cached files",
+    "Offline navigation, query strings and icons are served without network calls",
+    "Simulated worker cold start uses existing offline cache",
+    "Fetch handling is limited to same-origin app assets and scope",
+    "Incomplete cache is not falsely reported ready while offline",
+    "Missing assets are repaired when the network returns",
+    "Failed update install leaves previous release cache intact",
+    "Successful update deletes only previous cache for this app scope"
+  ]
+}

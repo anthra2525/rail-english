@@ -1,0 +1,16 @@
+{
+  "method": "Chromium local HTML rendering with in-memory storage harness; not iPhone/Safari or installed PWA",
+  "passed": [
+    "120 questions, 40 in each course",
+    "Wrong answers / uncertain correct answers / clear correct answers are separated",
+    "Answer saved before confidence; fresh page restores in-progress answer without duplicates",
+    "New-only practice avoids previously answered items",
+    "First-attempt accuracy is independent of review accuracy",
+    "Immediate mistake review updates spaced schedule and review counters",
+    "Course/filter controls and reading passage rendering",
+    "Backup serialization / import restore with confirmation",
+    "Additional pack import preserves progress; duplicate IDs rejected",
+    "No horizontal overflow at 320/390/768/1280px; large text works",
+    "Storage failure warns; malformed existing data is not overwritten"
+  ]
+}
