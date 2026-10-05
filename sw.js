@@ -1,9 +1,9 @@
 /* One cache per app scope and release; never delete other apps' caches. */
 'use strict';
-const VERSION='1.1.0';
+const VERSION='1.2.0';
 const PREFIX=`rail-english::${self.registration.scope}::`;
 const CACHE_NAME=PREFIX+VERSION;
-const ASSETS=['index.html','manifest.webmanifest','icons/icon-192.png','icons/icon-512.png','icons/apple-touch-icon.png'].map(p=>new URL(p,self.registration.scope).href);
+const ASSETS=['index.html','vocabulary-data.js','vocabulary-core.js','vocabulary-ui.js','manifest.webmanifest','icons/icon-192.png','icons/icon-512.png','icons/apple-touch-icon.png'].map(p=>new URL(p,self.registration.scope).href);
 const INDEX=ASSETS[0];
 self.addEventListener('install',event=>{
  event.waitUntil((async()=>{const cache=await caches.open(CACHE_NAME);await cache.addAll(ASSETS.map(url=>new Request(url,{cache:'reload'})));})());
