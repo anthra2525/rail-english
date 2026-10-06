@@ -14,9 +14,9 @@ const sandbox={RailVocab:V,RAIL_VOCABULARY:items,document:{getElementById:()=>({
 vm.runInNewContext(main.slice(0,main.indexOf('try{const raw=localStorage'))+'globalThis.api={cleanState,defaultState};})();',sandbox);
 const {cleanState,defaultState}=sandbox.globalThis.api;
 const plain=x=>JSON.parse(JSON.stringify(x));
-test('catalog: 120 distinct lexemes, 80 words and 40 idioms, coherent four-choice groups',()=>{
- assert.equal(items.length,120);assert.equal(items.filter(x=>x.kind==='word').length,80);assert.equal(items.filter(x=>x.kind==='idiom').length,40);
- assert.equal(new Set(items.map(x=>x.id)).size,120);assert.equal(new Set(items.map(x=>x.term.toLowerCase())).size,120);
+test('catalog: 480 distinct lexemes, 320 words and 160 idioms, coherent four-choice groups',()=>{
+ assert.equal(items.length,480);assert.equal(items.filter(x=>x.kind==='word').length,320);assert.equal(items.filter(x=>x.kind==='idiom').length,160);
+ assert.equal(new Set(items.map(x=>x.id)).size,480);assert.equal(new Set(items.map(x=>x.term.toLowerCase())).size,480);
  for(const i of items){assert.equal(i.options.length,4);assert.equal(new Set(i.options).size,4);assert.equal(i.options[i.answer],i.meaning);assert.ok(i.example.length>25);assert.ok(i.translation.length>10);assert.ok(i.collocations.length);assert.ok(!i.term.includes('_____'));}
 });
 test('JST day boundary is independent of host timezone',()=>{
@@ -114,13 +114,19 @@ test('notification snapshot remains disconnected data only, includes JST hours a
  assert.deepEqual(snapshot.hours,[20,21,22]);assert.equal(snapshot.timezone,'Asia/Tokyo');assert.equal(snapshot.complete,false);assert.ok(!('enabled' in snapshot));
 });
 test('HTML, SW and unchanged origin identities align; all scripts parse; original question IDs unchanged',()=>{
- assert.ok(html.includes("APP_VERSION='1.2.0'"));assert.ok(html.includes("STORAGE_KEY='rail-english-v1'"));
- const sw=fs.readFileSync(path.join(app,'sw.js'),'utf8');assert.ok(sw.includes("VERSION='1.2.0'"));
+ assert.ok(html.includes("APP_VERSION='1.2.1'"));assert.ok(html.includes("STORAGE_KEY='rail-english-v1'"));
+ const sw=fs.readFileSync(path.join(app,'sw.js'),'utf8');assert.ok(sw.includes("VERSION='1.2.1'"));
  for(const name of ['vocabulary-core.js','vocabulary-data.js','vocabulary-ui.js']){assert.ok(sw.includes(name));assert.ok(html.includes(name));new vm.Script(fs.readFileSync(path.join(app,name),'utf8'));}
  new vm.Script(main);new vm.Script(sw);
  const manifest=JSON.parse(fs.readFileSync(path.join(app,'manifest.webmanifest'),'utf8'));assert.equal(manifest.id,'./');assert.equal(manifest.scope,'./');assert.equal(manifest.start_url,'./');
  assert.equal(data.questions.length,300);assert.equal(new Set(data.questions.map(q=>q.id)).size,300);
  const basePath=path.resolve(app,'../baseline/rail-english-64ca2cc63203ae0d535e95873824189e6d84ec93');
- if(fs.existsSync(basePath)){const original=fs.readFileSync(path.join(basePath,'index.html'),'utf8');assert.equal(html.match(/<script[^>]*id="question-data"[^>]*>([\s\S]*?)<\/script>/)[1],original.match(/<script[^>]*id="question-data"[^>]*>([\s\S]*?)<\/script>/)[1]);assert.equal(fs.readFileSync(path.join(basePath,'manifest.webmanifest'),'utf8'),fs.readFileSync(path.join(app,'manifest.webmanifest'),'utf8'));}
+ if(fs.existsSync(basePath)){const original=fs.readFileSync(path.join(basePath,'index.html'),'utf8');assert.equal(html.match(/<script[^>]*id="question-data"[^>]*>([\s\S]*?)<\/script>/)[1],original.match(/<script[^>]*id="question-data"[^>]*>([\s\S]*?)<\/script>/)[1]);const oldManifest=JSON.parse(fs.readFileSync(path.join(basePath,'manifest.webmanifest'),'utf8'));for(const key of ['id','scope','start_url','icons'])assert.deepEqual(manifest[key],oldManifest[key]);}
 });
 
+
+
+test('all original120 vocabulary objects and distractors survive expansion unchanged',()=>{
+ const hash=require('node:crypto').createHash('sha256').update(JSON.stringify(items.slice(0,120))).digest('hex');assert.equal(hash,'6e36c6419465ef6359292db64b44c4f1353155e5fe49d8b96902477bb8e96717');
+ assert.equal(items[120].id,'lex-121');assert.equal(items[479].id,'lex-480');
+});

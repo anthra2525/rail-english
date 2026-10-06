@@ -8,7 +8,7 @@ root.createVocabularyUI=function(h){
  function home(){
   const s=state(),day=safeDay(),p=s.days[day],planned=p||V.selection(s,items,day),done=V.confirmed(p),complete=V.completed(p),newCount=planned.newIds.length;
   const reviews=Object.values(s.progress).filter(x=>x.needsReview).length;
-  return `${h.intro('WORDS FOR YOUR NEXT STEP.','単語と熟語を、毎日の力に。','意味を選んで、例文で確認。少しずつ、使える英語へ。')}
+  return `${h.intro('WORDS FOR YOUR NEXT STEP.','TOEIC 810点を目指す単語・熟語','意味を選んで、例文と一緒に確認。ビジネスで使う表現を少しずつ。')}
   <div class="layout"><div class="stack"><section class="card hero vocabulary-hero"><div class="hero-label">TODAY · ${day} · 日本時間</div>
   <div class="hero-heading"><div><h2>${complete?'今日の学習は完了！':p?'続きから、ひとつずつ。':'今日の単語・熟語'}</h2><p>新規 ${newCount} 項目 ＋ 復習 ${planned.ids.length-newCount} 項目</p></div><div class="round-count"><span>${done}<small>/${planned.ids.length}</small></span></div></div>
   <button class="btn full" data-action="vocab-start" ${planned.ids.length?'':'disabled'}>${complete?'今日の結果を見る':p?'続きを再開する':'今日の学習を始める'} ${h.icon('arrow',18)}</button>
@@ -19,7 +19,7 @@ root.createVocabularyUI=function(h){
   <div class="stat-grid section-space"><div><div class="stat-value">${Object.keys(s.progress).length}</div><div class="stat-label">学習した項目 / ${items.length}</div></div><div><div class="stat-value">${Object.values(s.progress).filter(p=>p.stage===5&&!p.needsReview).length}</div><div class="stat-label">30日間隔に到達</div></div><div><div class="stat-value">${Object.values(s.days).filter(V.completed).length}</div><div class="stat-label">完了した日数</div></div></div></section></div>
   <div class="stack"><section class="card"><div class="section-row"><h2>間違い・迷いの復習</h2><span class="count-bubble">${reviews}</span></div><p class="small muted">必要な復習は今日の課題に追加。期限前に見直すこともできます。</p><button class="btn secondary full section-space" data-action="nav" data-route="vocab-review">単語・熟語の復習を見る</button></section>
   <section class="card"><h2>TOEIC問題も、いつでも。</h2><p class="small muted section-space">これまでの300問と追加問題、学習記録、中断した続きはこちら。</p><button class="btn secondary full section-space" data-action="nav" data-route="toeic">${h.state().session?'TOEIC問題の続きを開く':'TOEIC問題モードを開く'}</button></section>
-  <section class="card"><h3>自分のペースで</h3><p class="small muted section-space">新規は1日 ${s.settings.dailyNew} 項目。設定で変更できます。開始済みの今日の項目は変わりません。</p><p class="subtle-note section-space">通知は未接続です。保存した希望時刻だけでは通知されません。</p><button class="text-btn" data-action="nav" data-route="settings">学習量・通知の設定</button></section></div></div>`;
+  <section class="card"><h3>自分のペースで</h3><p class="small muted section-space">新規は1日 ${s.settings.dailyNew} 項目。設定で変更できます。開始済みの今日の項目は変わりません。</p><p class="subtle-note section-space">通知は保留中です。今は単語・熟語の学習を優先します。</p><button class="text-btn" data-action="nav" data-route="settings">学習量・通知の設定</button></section></div></div>`;
  }
  function quiz(mode='daily'){
   const s=state(),day=safeDay(),p=V.active(s,mode);
@@ -45,7 +45,7 @@ root.createVocabularyUI=function(h){
  }
  function settings(){
   const s=state();
-  return `<div class="layout section-space vocab-settings"><section class="card"><h2>単語・熟語の学習量</h2><div class="field"><label for="vocab-new">1日の新規項目数（単語＋熟語）</label><select id="vocab-new" data-vocab-setting="dailyNew">${[3,5,10,15].map(n=>`<option value="${n}" ${s.settings.dailyNew===n?'selected':''}>${n}項目${n===5?'（初期値）':''}</option>`).join('')}</select></div><p class="subtle-note section-space">期限の来た復習はこの数に追加します。変更は次に作る日次課題から適用され、開始済みの項目は変わりません。</p><p class="small muted section-space">収録：単語80・熟語40。TOEIC問題の正答は、単語の習得に置き換えません。</p></section>
+  return `<div class="layout section-space vocab-settings"><section class="card"><h2>単語・熟語の学習量</h2><div class="field"><label for="vocab-new">1日の新規項目数（単語＋熟語）</label><select id="vocab-new" data-vocab-setting="dailyNew">${[3,5,10,15].map(n=>`<option value="${n}" ${s.settings.dailyNew===n?'selected':''}>${n}項目${n===5?'（初期値）':''}</option>`).join('')}</select></div><p class="subtle-note section-space">期限の来た復習はこの数に追加します。変更は次に作る日次課題から適用され、開始済みの項目は変わりません。</p><p class="small muted section-space">収録：単語${items.filter(x=>x.kind==='word').length}・熟語${items.filter(x=>x.kind==='idiom').length}。目標はTOEIC 810点。TOEIC問題の正答は、単語の習得に置き換えません。</p></section>
   <section class="card"><div class="section-row"><h2>学習リマインダー</h2><span class="tag">未接続・通知されません</span></div><p class="small">日本時間 20:00 / 未完了なら 21:00・22:00</p><p class="small muted section-space">今日の固定課題をすべて確定すると、その日の以降の配信を停止する設計です。</p><label class="setting-row" for="vocab-reminder"><div><h3>接続後にこの時刻で通知を希望する</h3><p>希望だけを端末に保存します。通知はまだ有効になりません。</p></div><input id="vocab-reminder" class="switch" type="checkbox" data-vocab-setting="reminders" ${s.reminders.wanted?'checked':''}></label>
   <details><summary>利用開始に必要な準備</summary><p>通知を配信する小規模なサーバーとの接続が必要です。iPhoneではホーム画面に追加したアプリを開き、利用者の操作で通知を許可します。今回は接続・購読・許可の要求は行いません。</p><p>オフラインの完了は端末に保存されます。将来の配信停止にはサーバーへの同期が必要で、未同期の完了をサーバーが知ることはできません。</p></details></section></div>`;
  }
@@ -71,4 +71,5 @@ root.createVocabularyUI=function(h){
  return {home,quiz,review,settings,stats,action,setting};
 };
 })(globalThis);
+
 

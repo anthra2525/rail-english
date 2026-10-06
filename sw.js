@@ -1,6 +1,6 @@
 /* One cache per app scope and release; never delete other apps' caches. */
 'use strict';
-const VERSION='1.2.0';
+const VERSION='1.2.1';
 const PREFIX=`rail-english::${self.registration.scope}::`;
 const CACHE_NAME=PREFIX+VERSION;
 const ASSETS=['index.html','vocabulary-data.js','vocabulary-core.js','vocabulary-ui.js','manifest.webmanifest','icons/icon-192.png','icons/icon-512.png','icons/apple-touch-icon.png'].map(p=>new URL(p,self.registration.scope).href);
@@ -34,3 +34,4 @@ self.addEventListener('message',event=>{
   }catch(e){event.ports[0]?.postMessage({ready:false,version:VERSION});}
  })());
 });
+
