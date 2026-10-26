@@ -114,8 +114,8 @@ test('notification snapshot remains disconnected data only, includes JST hours a
  assert.deepEqual(snapshot.hours,[20,21,22]);assert.equal(snapshot.timezone,'Asia/Tokyo');assert.equal(snapshot.complete,false);assert.ok(!('enabled' in snapshot));
 });
 test('HTML, SW and unchanged origin identities align; all scripts parse; original question IDs unchanged',()=>{
- assert.ok(html.includes("APP_VERSION='1.2.1'"));assert.ok(html.includes("STORAGE_KEY='rail-english-v1'"));
- const sw=fs.readFileSync(path.join(app,'sw.js'),'utf8');assert.ok(sw.includes("VERSION='1.2.1'"));
+ assert.ok(html.includes("APP_VERSION='1.3.0'"));assert.ok(html.includes("STORAGE_KEY='rail-english-v1'"));
+ const sw=fs.readFileSync(path.join(app,'sw.js'),'utf8');assert.ok(sw.includes("VERSION='1.3.0'"));
  for(const name of ['vocabulary-core.js','vocabulary-data.js','vocabulary-ui.js']){assert.ok(sw.includes(name));assert.ok(html.includes(name));new vm.Script(fs.readFileSync(path.join(app,name),'utf8'));}
  new vm.Script(main);new vm.Script(sw);
  const manifest=JSON.parse(fs.readFileSync(path.join(app,'manifest.webmanifest'),'utf8'));assert.equal(manifest.id,'./');assert.equal(manifest.scope,'./');assert.equal(manifest.start_url,'./');

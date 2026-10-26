@@ -1,0 +1,76 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const {results,chromium,launchOptions}=require('./browser-env.cjs');
+const items=require('../vocabulary-data.js');
+const url='http://127.0.0.1:4173/rail-english/',key='rail-english-v1',now=Date.parse('2026-10-26T14:59:00Z');
+(async()=>{
+ const browser=await chromium.launch(launchOptions);
+ try{
+  const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,acceptDownloads:true});
+  const page=await context.newPage(),errors=[],checks=[];page.on('pageerror',e=>errors.push(e.message));await page.clock.install({time:now});
+  await page.goto(url);await page.waitForFunction(()=>document.getElementById('offline-status').textContent.includes('準備完了'));
+  const read=()=>page.evaluate(k=>JSON.parse(localStorage.getItem(k)),key);
+  const nav=async(route)=>page.locator('[data-route="'+route+'"]').last().click();
+  const answer=async(wrong=false)=>{const b=page.locator('[data-action="vocab-answer"]').first(),id=await b.getAttribute('data-item'),item=items.find(i=>i.id===id);await page.locator('[data-action="vocab-answer"][data-choice="'+((item.answer+(wrong?1:0))%4)+'"]').click();return id;};
+  const confirm=async()=>page.locator('[data-action="vocab-confirm"]').last().click();
+  const step=async()=>page.evaluate(()=>{
+   const b=document.querySelector('[data-action="vocab-answer"]');if(!b)return false;
+   if(!b.disabled){const item=RAIL_VOCABULARY.find(i=>i.id===b.dataset.item);document.querySelector('[data-action="vocab-answer"][data-choice="'+item.answer+'"]').click();}
+   [...document.querySelectorAll('[data-action="vocab-confirm"]')].at(-1).click();return true;
+  });
+  const finish=async()=>{let n=0;while(await step())assert.ok(++n<=50);};
+  const fire=async(p,d)=>p.evaluate(d=>{const b=document.createElement('button');Object.assign(b.dataset,d);document.body.append(b);b.click();b.click();b.remove();},d);
+  assert.deepEqual(await page.locator('#vocab-practice-size option').allTextContents(),['10問','20問','30問','50問']);
+  await page.screenshot({path:path.join(results,'practice-home-mobile.png'),fullPage:true});
+  await page.locator('[data-action="vocab-start"]').click();await finish();
+  const daily=(await read()).vocabulary.days['2026-10-26'];assert.ok(daily.completedAt);
+  assert.equal(await page.locator('[data-action="vocab-free"]').count(),1);checks.push('Daily completion offers free practice immediately with four size choices');
+  await page.locator('#vocab-practice-size').selectOption('10');await page.locator('#vocab-practice-kind').selectOption('idiom');
+  const startToken=await page.locator('[data-action="vocab-free"]').evaluate(el=>({...el.dataset}));await fire(page,startToken);
+  let s=await read();const firstPlan=s.vocabulary.practice.id,firstIds=s.vocabulary.practice.ids;
+  assert.equal(firstIds.length,10);assert.ok(firstIds.every(id=>items.find(i=>i.id===id).kind==='idiom'));assert.ok(firstIds.every(id=>!daily.ids.includes(id)));
+  checks.push('10-idiom set starts after daily completion; double start resumes one set and avoids daily IDs');
+  const wrongId=await answer(true),pending=await read();await page.screenshot({path:path.join(results,'practice-wrong-mobile.png'),fullPage:true});
+  const answerTime=pending.vocabulary.practice.answers[wrongId].at;
+  await page.clock.setSystemTime(answerTime-60000);await confirm();assert.deepEqual(await read(),pending);
+  assert.ok((await page.locator('body').innerText()).includes('端末の時刻が回答時より前'));
+  await page.reload();await page.locator('[data-action="vocab-free"]').click();assert.equal(await page.locator('#storage-warning').textContent(),'');
+  assert.equal(await page.locator('[data-action="vocab-answer"]:disabled').count(),4);
+  await page.clock.setSystemTime(answerTime+1000);
+  checks.push('Clock rollback rejects confirmation without corrupting storage; pending answer resumes after clock correction');
+  const token=await page.locator('[data-action="vocab-confirm"]').first().evaluate(el=>({...el.dataset}));await fire(page,token);
+  assert.equal((await read()).vocabulary.attempts.length,6);assert.equal((await read()).vocabulary.practice.id,firstPlan);checks.push('Pending answer survives reload; repeated stale confirmation credits only once');
+  await finish();s=await read();assert.equal(s.vocabulary.attempts.length,15);assert.deepEqual(s.vocabulary.days['2026-10-26'],daily);
+  await page.screenshot({path:path.join(results,'practice-complete-mobile.png'),fullPage:true});checks.push('Completed free set appends ten results without changing daily goal or legacy results');
+  await page.locator('#vocab-practice-size').selectOption('20');await page.locator('#vocab-practice-kind').selectOption('all');await page.locator('[data-action="vocab-free"]').click();
+  const second=(await read()).vocabulary.practice;assert.equal(second.ids.length,20);assert.ok(second.ids.every(id=>!firstIds.includes(id)&&!daily.ids.includes(id)));await answer();
+  const midnightToken=await page.locator('[data-action="vocab-confirm"]').last().evaluate(el=>({...el.dataset}));
+  await page.clock.setSystemTime(Date.parse('2026-10-26T15:01:00Z'));await fire(page,midnightToken);assert.equal((await read()).vocabulary.attempts.length,15);
+  await confirm();await finish();s=await read();assert.equal(s.vocabulary.attempts.length,35);assert.ok(s.vocabulary.attempts.slice(15).every(a=>a.day==='2026-10-27'));assert.equal(s.vocabulary.days['2026-10-27'],undefined);
+  checks.push('Second 20-item set favors unserved items; midnight resumes safely and records actual confirmation day');
+  await page.locator('#vocab-practice-size').selectOption('30');await page.locator('[data-action="vocab-free"]').click();const offlineWrongId=await answer(true);
+  const offlineBefore=await read();await context.setOffline(true);await page.reload();await page.locator('[data-action="vocab-free"]').click();
+  assert.equal((await read()).vocabulary.practice.id,offlineBefore.vocabulary.practice.id);await confirm();await finish();await page.reload();assert.equal((await read()).vocabulary.attempts.length,65);
+  checks.push('30-item set and pending answer resume, finish and persist fully offline');await context.setOffline(false);
+  await page.locator('#vocab-practice-kind').selectOption('review');await page.locator('#vocab-practice-size').selectOption('50');
+  const reviewCount=Object.values((await read()).vocabulary.progress).filter(p=>p.needsReview).length;
+  await page.locator('[data-action="vocab-free"]').click();assert.equal((await read()).vocabulary.practice.ids.length,reviewCount);assert.ok((await read()).vocabulary.practice.ids.includes(offlineWrongId));await finish();
+  checks.push('Mistake-only practice caps requested 50 at available candidates and keeps review history');
+  await page.locator('#vocab-practice-kind').selectOption('word');await page.locator('[data-action="vocab-free"]').click();
+  assert.equal((await read()).vocabulary.practice.ids.length,50);const activeId=(await read()).vocabulary.practice.id;await answer();
+  const stale=await page.locator('[data-action="vocab-confirm"]').last().evaluate(el=>({...el.dataset}));
+  const other=await context.newPage();other.on('pageerror',e=>errors.push(e.message));await other.clock.install({time:await page.evaluate(()=>Date.now())});await other.goto(url);await other.locator('[data-action="vocab-free"]').click();await other.locator('[data-action="vocab-confirm"]').last().click();
+  const afterOther=await read();await fire(page,stale);assert.equal((await read()).vocabulary.attempts.length,afterOther.vocabulary.attempts.length);assert.equal((await read()).vocabulary.practice.id,activeId);await other.close();
+  checks.push('Two tabs re-read latest state; stale confirmation cannot overwrite or duplicate an attempt');
+  await nav('home');await page.locator('[data-route="vocab-review"]').first().click();await page.locator('[data-action="vocab-practice"]').first().click();assert.equal((await read()).vocabulary.practice.id,activeId);
+  checks.push('Single-item review entry preserves an existing unfinished 50-item set');
+  await nav('home');assert.equal(await page.locator('#vocab-practice-size').isDisabled(),true);
+  for(const width of [320,375,390,768,1280]){await page.setViewportSize({width,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);}
+  await page.setViewportSize({width:320,height:800});await nav('settings');await page.locator('#largeText').check();await nav('home');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+  await page.screenshot({path:path.join(results,'practice-resume-320-large.png'),fullPage:true});checks.push('New selector and resume card fit 320/375/390/768/1280 widths and 320 large text');
+  await nav('settings');const download=page.waitForEvent('download');await page.locator('[data-action="export"]').click();const backupPath=path.join(results,'practice-backup.json');await(await download).saveAs(backupPath);
+  const backup=JSON.parse(fs.readFileSync(backupPath,'utf8'));page.once('dialog',d=>d.accept());await page.locator('#backup-file').setInputFiles(backupPath);await page.waitForSelector('.vocabulary-hero');assert.deepEqual(await read(),backup.state);
+  assert.equal(new Set(backup.state.vocabulary.attempts.map(a=>a.id)).size,backup.state.vocabulary.attempts.length);checks.push('Real export/import preserves multiple sets, pending set, settings, unique IDs and all history');
+  assert.equal(await page.locator('#storage-warning').textContent(),'');require('../vocabulary-core.js').clean((await read()).vocabulary,items);assert.deepEqual(errors,[]);const result={passed:checks.length,checks,errors,browser:await browser.version()};fs.writeFileSync(path.join(results,'practice-browser-results.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

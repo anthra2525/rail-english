@@ -1,0 +1,10 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path');
+const app=path.resolve(__dirname,'..');
+const tools=process.env.RAIL_TEST_TOOLS||path.resolve(app,'../tools');
+const results=process.env.RAIL_TEST_OUTPUT||path.resolve(app,'../verification');
+fs.mkdirSync(path.join(results,'tmp'),{recursive:true});
+process.env.TEMP=path.join(results,'tmp');process.env.TMP=process.env.TEMP;
+const {chromium}=require(path.join(tools,'playwright/package'));
+const launchOptions={headless:true,executablePath:path.join(tools,'browser/chrome-win64/chrome.exe'),downloadsPath:results,env:{...process.env,USERPROFILE:path.join(results,'browser-profile'),APPDATA:path.join(results,'browser-profile/appdata'),LOCALAPPDATA:path.join(results,'browser-profile/local')},args:['--no-first-run','--no-default-browser-check','--disable-crash-reporter']};
+module.exports={app,tools,results,chromium,launchOptions};

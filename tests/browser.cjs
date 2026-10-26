@@ -1,12 +1,11 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'../..'),tools=path.join(root,'tools'),results=path.join(root,'verification');
-fs.mkdirSync(results,{recursive:true});process.env.TEMP=path.join(tools,'tmp');process.env.TMP=process.env.TEMP;
-const {chromium}=require(path.join(tools,'playwright/package'));
+const {app,results,chromium,launchOptions}=require('./browser-env.cjs');
 const V=require('../vocabulary-core.js'),items=require('../vocabulary-data.js');
 const url='http://127.0.0.1:4173/rail-english/',key='rail-english-v1',now=Date.parse('2026-10-05T11:00:00Z'),day='2026-10-05';
 (async()=>{
- const browser=await chromium.launch({headless:true,executablePath:path.join(tools,'browser/chrome-win64/chrome.exe'),downloadsPath:results,env:{...process.env,TEMP:process.env.TEMP,TMP:process.env.TMP,USERPROFILE:path.join(tools,'browser-profile'),APPDATA:path.join(tools,'browser-profile/appdata'),LOCALAPPDATA:path.join(tools,'browser-profile/local')},args:['--no-first-run','--no-default-browser-check','--disable-crash-reporter']});
+ const browser=await chromium.launch(launchOptions);
+ try{
  const checks=[],errors=[];
  const context=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:1,acceptDownloads:true});
  const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
@@ -95,7 +94,7 @@ const url='http://127.0.0.1:4173/rail-english/',key='rail-english-v1',now=Date.p
  await page.screenshot({path:path.join(results,'05-narrow-large-text.png'),fullPage:true});
  checks.push('No horizontal overflow at 320/375/390/768/1280px and 320px large text');
  // Restore a legacy backup, including a pending custom question.
- const raw=JSON.parse(fs.readFileSync(path.join(root,'app/index.html'),'utf8').match(/<script[^>]*id="question-data"[^>]*>([\s\S]*?)<\/script>/)[1]);
+ const raw=JSON.parse(fs.readFileSync(path.join(app,'index.html'),'utf8').match(/<script[^>]*id="question-data"[^>]*>([\s\S]*?)<\/script>/)[1]);
  const q={...raw.questions[0],id:'custom-ui-question',extension:{kept:true}};
  const legacy={schemaVersion:1,settings:{level:730,filter:'all',size:5,largeText:false,timer:true,futurePreference:9},progress:{[q.id]:{seen:1,correct:1,streak:0,due:now+86400000,needsReview:true,lastAt:now,futureProgress:true}},attempts:[{id:'legacy-a',qid:q.id,choice:q.answer,correct:true,type:'new',seconds:2,at:now,confidence:'pending',futureAttempt:'yes'}],session:{id:'legacy-s',mode:'daily',qids:[q.id],index:0,attemptIds:['legacy-a'],started:now,futureSession:4},lastResult:null,extraQuestions:[q],futureRoot:{kept:true}};
  await page.evaluate(({key,legacy})=>localStorage.setItem(key,JSON.stringify(legacy)),{key,legacy});await page.reload();
@@ -114,6 +113,6 @@ const url='http://127.0.0.1:4173/rail-english/',key='rail-english-v1',now=Date.p
  assert.deepEqual(errors,[]);
  const summary={browser:await browser.version(),checks,errors,passed:checks.length};
  fs.writeFileSync(path.join(results,'browser-results.json'),JSON.stringify(summary,null,2));console.log(JSON.stringify(summary,null,2));
- await browser.close();
+ }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});
 

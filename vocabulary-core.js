@@ -1,7 +1,7 @@
 /* Pure vocabulary state machine. No network or notification permission requests. */
 (function(root){
 'use strict';
-const DAY=86400000, INTERVALS=[1,3,7,14,30];
+const DAY=86400000, INTERVALS=[1,3,7,14,30], PRACTICE_SIZES=[10,20,30,50], PRACTICE_KINDS=['all','word','idiom','review'];
 const dayKey=(now=Date.now())=>new Date(now+9*3600000).toISOString().slice(0,10);
 const plusDays=(day,n)=>new Date(Date.parse(day+'T00:00:00Z')+n*DAY).toISOString().slice(0,10);
 const isDay=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&Number.isFinite(Date.parse(x+'T00:00:00Z'))&&new Date(x+'T00:00:00Z').toISOString().slice(0,10)===x;
@@ -50,8 +50,7 @@ function start(s,items,now=Date.now()){
  return s.days[day];
 }
 function active(s,mode,now=Date.now()){
- const day=dayKey(now),p=mode==='practice'?s.practice:s.days[day];
- return p&&(mode!=='practice'||p.day===day)?p:null;
+ return (mode==='practice'?s.practice:s.days[dayKey(now)])||null;
 }
 function pendingId(p){return p?.ids.find(id=>!p.answers[id]||p.answers[id].confidence==='pending')||null;}
 function answer(s,mode,day,id,choice,now=Date.now()){
@@ -76,7 +75,8 @@ function schedule(old,correct,confidence,now){
 function confirm(s,items,mode,day,id,confidence,now=Date.now()){
  if(day!==dayKey(now)||!['clear','unsure'].includes(confidence))return false;
  const p=active(s,mode,now),a=p?.answers[id],item=items.find(x=>x.id===id);
- if(!item||!a||pendingId(p)!==id||a.confidence!=='pending')return false;
+ // A device clock adjustment must not create an unreadable saved attempt.
+ if(!item||!a||pendingId(p)!==id||a.confidence!=='pending'||now<a.at)return false;
  const correct=a.choice===item.answer;
  a.confidence=correct?confidence:'unsure';a.confirmedAt=now;
  s.progress[id]=schedule(s.progress[id],correct,a.confidence,now);
@@ -84,17 +84,57 @@ function confirm(s,items,mode,day,id,confidence,now=Date.now()){
  if(mode==='daily'&&completed(p))p.completedAt=now;
  s.sync.revision++;return true;
 }
-function practice(s,items,id,now=Date.now()){
- if(!items.some(x=>x.id===id)||!s.progress[id])return false;
- s.practice={id:'practice-'+now+'-'+Math.random().toString(36).slice(2),day:dayKey(now),ids:[id],answers:{}};
+// A single resumable set, including across midnight. Confirmed results live in the
+// append-only attempts log; starting another set never replaces those results.
+const practiceSettings=s=>({size:PRACTICE_SIZES.includes(s.settings.practiceSize)?s.settings.practiceSize:20,kind:PRACTICE_KINDS.includes(s.settings.practiceKind)?s.settings.practiceKind:'all'});
+const practicePool=(s,items,kind)=>items.filter(x=>kind==='review'?s.progress[x.id]?.needsReview:kind==='all'||x.kind===kind);
+const unfinishedPractice=s=>s.practice&&pendingId(s.practice)?s.practice:null;
+function practiceSelection(s,items,size,kind,now=Date.now()){
+ if(!PRACTICE_SIZES.includes(size)||!PRACTICE_KINDS.includes(kind))return [];
+ const day=dayKey(now),counts=new Map();
+ for(const a of s.attempts)if(a.day===day)counts.set(a.itemId,(counts.get(a.itemId)||0)+1);
+ // Reserve today's fixed goal too, so free practice complements the daily plan.
+ const reserved=[...(s.days[day]?.ids||[]),...(s.practice?.day===day?s.practice.ids:[])];
+ for(const id of reserved)counts.set(id,Math.max(1,counts.get(id)||0));
+ const pool=practicePool(s,items,kind),result=[];
+ const priority=i=>s.progress[i.id]?.due<=day?0:!s.progress[i.id]?1:2;
+ // Least practiced today first. Within each tier, due items and new vocabulary
+ // come first. Mix words/idioms without repeating IDs in a set.
+ for(const count of [...new Set(pool.map(i=>counts.get(i.id)||0))].sort((a,b)=>a-b)){
+  const tier=pool.filter(i=>(counts.get(i.id)||0)===count).map(i=>({item:i,tie:Math.random()}));
+  tier.sort((a,b)=>priority(a.item)-priority(b.item)||(s.progress[a.item.id]?.due||'').localeCompare(s.progress[b.item.id]?.due||'')||a.tie-b.tie);
+  const words=tier.filter(x=>x.item.kind==='word'),phrases=tier.filter(x=>x.item.kind==='idiom');
+  while(result.length<size&&(words.length||phrases.length)){
+   const pool=result.length%5===2||result.length%5===4?phrases:words;
+   result.push((pool.length?pool:words.length?words:phrases).shift().item.id);
+  }
+  if(result.length===size)break;
+ }
+ return result;
+}
+function makePractice(s,ids,now,details={}){
+ if(!ids.length)return false;
+ // Revision survives reloads; guard imported logs as well as same-millisecond taps.
+ let id='practice-'+now+'-'+(s.sync.revision+1);
+ while(s.practice?.id===id||s.attempts.some(a=>a.id.startsWith(id+'/')))id+='-next';
+ s.practice={id,day:dayKey(now),ids,answers:{},...details};s.sync.revision++;
  return true;
+}
+function startPractice(s,items,size=practiceSettings(s).size,kind=practiceSettings(s).kind,now=Date.now()){
+ if(unfinishedPractice(s))return true;
+ return makePractice(s,practiceSelection(s,items,size,kind,now),now,{size,kind});
+}
+function practice(s,items,id,now=Date.now()){
+ if(unfinishedPractice(s))return true;
+ if(!items.some(x=>x.id===id)||!s.progress[id])return false;
+ return makePractice(s,[id],now,{kind:'review'});
 }
 function notificationSnapshot(s,now=Date.now()){
  const day=dayKey(now),p=s.days[day];
  return {version:1,day,timezone:'Asia/Tokyo',hours:[20,21,22],wanted:s.reminders.wanted,revision:s.sync.revision,
   started:!!p,total:p?.ids.length||0,confirmed:confirmed(p),complete:completed(p),completedAt:completed(p)?p.completedAt:null};
 }
-const api={dayKey,plusDays,fresh,clean,selection,start,active,pendingId,answer,confirm,schedule,practice,confirmed,completed,notificationSnapshot};
+const api={dayKey,plusDays,fresh,clean,selection,start,active,pendingId,answer,confirm,schedule,practice,PRACTICE_SIZES,PRACTICE_KINDS,practiceSettings,practicePool,unfinishedPractice,practiceSelection,startPractice,confirmed,completed,notificationSnapshot};
 if(typeof module!=='undefined')module.exports=api;
 root.RailVocab=api;
 })(typeof globalThis!=='undefined'?globalThis:this);
